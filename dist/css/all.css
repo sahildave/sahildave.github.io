@@ -3855,13 +3855,18 @@ html.no-touch a:hover {
 }
 
 .flair-font {
-    font-family: Georgia,"Lucida Sans",serif;
+    font-family: "Lora",serif;
     font-style: italic;
+}
+
+.nav-text {
+    font-family: "Raleway",serif;
+	font-weight: thin;
 }
 
 
 .title-font {
-    font-family: "Helvetica Neue",Helvetica,sans-serif;
+    font-family: "Raleway",sans-serif;
     letter-spacing: -2px;
     text-transform: uppercase;
     color: #0B486B;
@@ -4046,7 +4051,7 @@ html.no-touch a:hover {
 .body-copy {
     line-height: 190%;
     font-size: 18px;
-    font-family: Georgia,serif;
+    font-family: Roboto,serif;
     font-weight: 200;
     color: #666;
 }
@@ -4275,12 +4280,11 @@ header.project-title {
 
 p.project-caption {
     letter-spacing: 0;
-    font-weight: 200;
+    font-weight: thin;
     line-height: 190%;
     font-size: 16px;
-    font-family: Georgia,serif;
+    font-family: Raleway,sans-serif;
     color: #FFFFFF;
-	font-style: italic;
 }
 
 p.project-description {
@@ -4288,7 +4292,7 @@ p.project-description {
     font-weight: 200;
     line-height: 190%;
     font-size: 18px;
-    font-family: Georgia,serif;
+    font-family: Roboto,serif;
     color: #FFFFFF;
 }
 
@@ -4311,8 +4315,8 @@ header.page-header h1 {
 }
 
 header.page-header h2 {
-    font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
-    font-weight: 200;
+    font-family: "Raleway",sans-serif;
+    font-weight: bold;
     font-size: 18px;
     text-transform: uppercase;
     color: #888;
