@@ -4272,6 +4272,17 @@ header.project-title {
     font-weight: 200;
     color: #0D47A1;
 }
+
+p.project-caption {
+    letter-spacing: 0;
+    font-weight: 200;
+    line-height: 190%;
+    font-size: 16px;
+    font-family: Georgia,serif;
+    color: #FFFFFF;
+	font-style: italic;
+}
+
 p.project-description {
     letter-spacing: 0;
     font-weight: 200;
@@ -4324,7 +4335,7 @@ header.page-header h3 {
     font-size: 24px;
     letter-spacing: 0;
     font-weight: 200;
-    padding: 15px 0 60px;
+    padding: 15px 0 0px;
     color: #888;
 }
 
@@ -6701,7 +6712,7 @@ article.process h3.process {
 article.process article.step {
     position: relative;
     padding-left: 200px;
-    margin-top: 80px;
+    margin-top: 40px;
     text-align: left;
 }
 
