@@ -130,6 +130,10 @@ code {
   content: "\f079";
 }
 
+.icon.job:before {
+	content : " "
+}
+
 @-webkit-keyframes bouncedelay {
   0%, 80%, 100% {
     -webkit-transform: scale(0);
@@ -4138,21 +4142,30 @@ article.work article.project p span:first-child:before {
 }
 
 .project-logo.juspay {
-  width: 80px;
-  height: 80px;
-  padding: 40px;
+  width:100%;
+  height : auto;
+  max-height : 80px;
+  max-width : 80px;
+  padding-top: 20px;
+  padding-right: 20px;
 }
 
 .project-logo.ostrich {
-  width: 80px;
-  height: 80px;
-  padding: 40px;
+  width:100%;
+  height : auto;
+  max-height : 80px;
+  max-width : 80px;
+  padding-top: 20px;
+  padding-right: 20px;
 }
 
 .project-logo.civildigital {
-  width: 80px;
-  height: 80px;
-  padding: 40px;
+  width:100%;
+  height : auto;
+  max-height : 80px;
+  max-width : 80px;
+  padding-top: 20px;
+  padding-right: 20px;
 }
 
 aside.project {
