@@ -3,7 +3,10 @@
 
 <!-- Header -->
 <header id="header"{% if page.layout == "landing" %} class="alt {{ page.style }}"{% endif %}{% if page.layout == "home" %} class="alt"{% endif %}>
-	<a href="{{ "" | relative_url }}/" class="logo"><strong>{{ site.title }}</strong> <span>{{ site.subtitle }}</span></a>
+	{% if page.layout != "home" %}<a href="{{ "" | relative_url }}/" class="logo">
+		<strong>{{ site.title }}</strong>
+		<span>{{ site.subtitle }}</span>
+	</a>{% endif %}
 	<nav>
 		<a href="#menu">Menu</a>
 	</nav>
