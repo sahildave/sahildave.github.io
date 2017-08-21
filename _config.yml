@@ -3,7 +3,7 @@ title: Sahil Dave
 subtitle:
 email: sahildave1991@gmail.com
 description: Design + Dev + Create
-baseurl: "/jekyll-trial" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.sahildave.xyz" # the base hostname & protocol for your site
 author:
 street_address: 1234 Somewhere Road

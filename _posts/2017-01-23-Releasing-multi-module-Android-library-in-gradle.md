@@ -2,7 +2,7 @@
 layout: post
 title: Releasing multi-module Android library in gradle
 description: In this post I would share how we release multiple split libraries and have interdependencies similar to how Google releases play-services or appcompat libraries.
-image: /assets/images/multi_library.png
+image: assets/images/multi_library.png
 categories: Android
 permalink: :categories/:title/
 hide_image_in_post: true
