@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Sahil Dave</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/jekyll-trial/assets/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/jekyll-trial/assets/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/jekyll-trial/assets/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/jekyll-trial/assets/favicon/manifest.json">
+	<link rel="mask-icon" href="/jekyll-trial/assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="/jekyll-trial/assets/favicon/favicon.ico">
+	<meta name="msapplication-config" content="/jekyll-trial/assets/favicon/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+
+		<!--[if lte IE 8]><script src="/jekyll-trial/assets/js/ie/html5shiv.js"></script><![endif]-->
+	<link rel="stylesheet" href="/jekyll-trial/assets/css/main.css" />
+	<!--[if lte IE 9]><link rel="stylesheet" href="/jekyll-trial/assets/css/ie9.css" /><![endif]-->
+	<!--[if lte IE 8]><link rel="stylesheet" href="/jekyll-trial/assets/css/ie8.css" /><![endif]-->
+</head>
+
+
+<body>
+<!-- Wrapper -->
+<div id="wrapper">
+
+<!-- Header -->
+<header id="header">
+	<a href="/jekyll-trial/" class="logo"><strong>Sahil Dave</strong> <span></span></a>
+	<nav>
+		<a href="#menu">Menu</a>
+	</nav>
+</header>
+
+<!-- Menu -->
+<nav id="menu">
+	<ul class="links">
+        
+		    
+		
+		    
+		
+		    
+		        <li><a href="/jekyll-trial/">Home</a></li>
+	    	
+		
+		    
+		
+		
+		    
+		        <li><a href="/jekyll-trial/android.html">Android</a></li>
+		    
+		
+		    
+		        <li><a href="/jekyll-trial/design.html">Design</a></li>
+		    
+		
+		    
+		
+		    
+		
+	</ul>
+	<ul class="actions vertical">
+		<li><a href="mailto:sahildave1991@gmail.com" class="button fit">Contact Me</a></li>
+	</ul>
+</nav>
+
+<!-- Main -->
+<div id="main" class="alt">
+
+<!-- One -->
+<section id="one">
+	<div class="inner">
+		<header class="major">
+			<h1>Product Flavors for Android Library</h1>
+		</header>
+		
+		<p><p>Product flavors is a powerful feature of the gradle plugin in Android Studio. Several developers use it to create free/paid or full/demo versions, releasing customized versions of their product.
+In this post I would add product flavors to one of the libraries that I am working on. This library is an enterprise entity and different clients have different requirements with respect to <code class="highlighter-rouge">minSdkVersion</code>, <code class="highlighter-rouge">targetSdkVersion</code>, support library versions and other internal dependencies.</p>
+
+<h2 id="product-flavors-on-applications">Product Flavors on Applications</h2>
+
+<p>Using product flavors on a regular applications is easy. Just add the productFlavors block and you are good to go.</p>
+
+<blockquote>
+  <p>app/build.gradle</p>
+</blockquote>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>productFlavors {
+    free {
+        applicationId "xyz.sahildave.flavoredlibrary.free"
+    }
+    paid {
+        applicationId "xyz.sahildave.flavoredlibrary.paid"
+    }
+}
+</code></pre>
+</div>
+
+<p>You can now create sourceSets folders <code class="highlighter-rouge">app/src/paid/</code> and <code class="highlighter-rouge">app/src/free/</code> parallel to <code class="highlighter-rouge">app/src/main/</code>. The common classes and resources can stay in <code class="highlighter-rouge">app/src/main</code> while the flavor dependent code can go in the respective folders. Hold on to this concept, we’d use it later.</p>
+
+<h2 id="product-flavors-in-android-library">Product Flavors in Android Library</h2>
+
+<p>Creating the product flavor in the library’s <code class="highlighter-rouge">build.gradle</code> file is basically the same as above, the thing that changes is the dependency management in the app module. Here I create 2 flavors with different sdk versions.</p>
+
+<p>Please note that publishing of all variants are not enabled by default. You need to use the <code class="highlighter-rouge">publishNonDefault</code> variable in the <code class="highlighter-rouge">android</code> scope. Read more about <code class="highlighter-rouge">publishNonDefault</code> here.</p>
+
+<blockquote>
+  <p>library/build.gradle</p>
+</blockquote>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>android {
+    publishNonDefault true
+    productFlavors {
+        sdk1521 {
+            minSdkVersion 15
+            targetSdkVersion 21
+            compileSdkVersion 21
+        }
+        sdk1524 {
+            minSdkVersion 15
+            targetSdkVersion 24
+            compileSdkVersion 24
+        }
+    }
+}
+</code></pre>
+</div>
+
+<p>For using these two product flavors in the demo app, I created two different configurations with the same SDK versions.</p>
+
+<blockquote>
+  <p>app/build.gradle</p>
+</blockquote>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>android {
+    // Other configurations and buildtypes
+    productFlavors {
+        app1521 {
+            minSdkVersion 15
+            targetSdkVersion 21
+            compileSdkVersion 21
+            applicationId "xyz.sahildave.flavoredlibrary.app1521"
+        }
+        app1524 {
+            minSdkVersion 15
+            targetSdkVersion 24
+            compileSdkVersion 24
+            applicationId "xyz.sahildave.flavoredlibrary.app1524"
+        }
+    }
+}
+
+configurations {
+    app1521DebugCompile
+    app1524DebugCompile
+}
+dependencies {
+    compile 'com.android.support:appcompat-v7:24.2.0'
+    app1521DebugCompile project(path: ':mylibrary', configuration: 'sdk1521Debug')
+    app1524DebugCompile project(path: ':mylibrary', configuration: 'sdk1524Debug')
+}
+</code></pre>
+</div>
+
+<p>I have only created the debug configurations because I wanted to test the integration in the demo app and not release it on any store.</p>
+
+<h2 id="potential-bugs">Potential Bugs</h2>
+
+<p>###1. Mismatched Support Library Version in the Library Module</p>
+
+<p>While you are building the flavored library, you’d want to use the correct support library with the corresponding library flavor, i.e.</p>
+
+<blockquote>
+  <p>library/build.gradle</p>
+</blockquote>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>android {
+    publishNonDefault true
+    productFlavors {
+        sdk1521 {
+            minSdkVersion 15
+            targetSdkVersion 21
+            compileSdkVersion 21
+        }
+        sdk1524 {
+            minSdkVersion 15
+            targetSdkVersion 24
+            compileSdkVersion 24
+        }
+    }
+}
+dependencies {
+//    compile 'com.android.support:appcompat-v7:24.2.1'
+    sdk1524Compile 'com.android.support:appcompat-v7:24.2.1'
+    sdk1521Compile 'com.android.support:appcompat-v7:21.0.3'
+}
+</code></pre>
+</div>
+
+<p>Lint does not give a warning for flavored apps (tried in AS 2.1 and AS 2.2) but you can try to replicate it by creating a separate application module and setting <code class="highlighter-rouge">compileSdkVersion</code> and support library version different. You’d see this lint warning:</p>
+
+<blockquote>
+
+  <p>This support library should not use a different version (24) than the compileSdkVersion (21):
+There are some combinations of libraries, or tools and libraries, that are incompatible, or can lead to bugs. One such incompatibility is compiling with a version of the Android support libraries that is not the latest version (or in particular, a version lower than your targetSdkVersion.)</p>
+</blockquote>
+
+<p>###2. Multiple Support Library Versions in App Module</p>
+
+<p>Now that the library variants are dependent on different versions of support library, the current dependencies system in the app module would use two versions of support library at the same time for the flavor 1521. To cope with this problem, you should make the app variants depend upon the correct support library versions as well.</p>
+
+<blockquote>
+  <p>app/build.gradle</p>
+</blockquote>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>android {
+    // Other configurations and buildtypes
+    productFlavors {
+        app1521 {
+            minSdkVersion 15
+            targetSdkVersion 21
+            compileSdkVersion 21
+            applicationId "xyz.sahildave.flavoredlibrary.app1521"
+        }
+        app1524 {
+            minSdkVersion 15
+            targetSdkVersion 24
+            compileSdkVersion 24
+            applicationId "xyz.sahildave.flavoredlibrary.app1524"
+        }
+    }
+}
+configurations {
+    app1521DebugCompile
+    app1524DebugCompile
+}
+dependencies {
+//    compile 'com.android.support:appcompat-v7:24.1.0'
+    app1521DebugCompile project(path: ':mylibrary', configuration: 'sdk1521Debug')
+    app1524DebugCompile project(path: ':mylibrary', configuration: 'sdk1524Debug')
+    app1521DebugCompile 'com.android.support:appcompat-v7:21.0.3'
+    app1524DebugCompile 'com.android.support:appcompat-v7:24.2.0'
+}
+</code></pre>
+</div>
+
+<h3 id="3-appcompatactivity-not-available-in-flavor-targeting-21">3. AppCompatActivity not available in flavor targeting 21</h3>
+<p>Now that we have made the flavor app1521 and sdk1521 dependent on <code class="highlighter-rouge">support-library</code> 21+, we can’t extend the good old <code class="highlighter-rouge">AppCompatActivity</code> and have to fallback to ActionBarActivity. For this we use the flexibility of <code class="highlighter-rouge">sourcesSets</code>. We create the parallel folders and abstract out the superclass for <code class="highlighter-rouge">LibraryActivity</code>. This way we can have different superclass dependent upon the flavor of the library we are dealing with. The plan is to make the <code class="highlighter-rouge">FlavoredActivity</code> extend <code class="highlighter-rouge">ActionBarActivity</code> in sdk1521 and <code class="highlighter-rouge">AppCompatActivity</code> in sdk1524:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>library
+    |
+    |--src
+    |    |--main
+    |    |    |--java
+    |    |    |    |--xyz.sahildave.mylibrary
+    |    |    |    |    |--LibraryActivity.java
+    |    |
+    |    |--sdk1521
+    |    |    |--java
+    |    |    |    |--xyz.sahildave.mylibrary
+    |    |    |    |    |--FlavoredActivity.java
+    |    |
+    |    |--sdk1524
+    |    |    |--java
+    |    |    |    |--xyz.sahildave.mylibrary
+    |    |    |    |    |--FlavoredActivity.java
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Flavor: sdk1521</p>
+</blockquote>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>public abstract class FlavoredActivity extends ActionBarActivity {
+    abstract String generateLibraryText();
+}
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Flavor: sdk1524</p>
+</blockquote>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>public abstract class FlavoredActivity extends AppCompatActivity {
+    abstract String generateLibraryText();
+}
+</code></pre>
+</div>
+<p>Now that we have abstracted out the <code class="highlighter-rouge">FlavoredActivity</code>, we can extend it in our main <code class="highlighter-rouge">LibraryActivity</code>. The same thing can be done for other flavor dependent entities.</p>
+
+<p>You can see all of this running in action at this project repo. https://github.com/sahildave/Flavored-Library</p>
+
+<hr />
+
+<p>This post was originally seen <a href="https://android.jlelse.eu/product-flavors-for-android-library-d3b2d240fca2">here</a> on Medium.</p>
+</p>
+	</div>
+</section>
+
+</div>
+  <!-- Footer -->
+	<footer id="footer">
+		<div class="inner">
+			<ul class="icons">
+				
+				<li><a href="mailto:sahildave1991@gmail.com" class="icon alt fa-envelope" target="_blank"><span class="label">E-Mail</span></a></li>
+				
+				
+				<li><a href="https://github.com/sahildave/" class="icon alt fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+				
+				
+				<li><a href="https://twitter.com/sahildave1991" class="icon alt fa-twitter" target="_blank"><span class="label">Twitter</span></a></li>
+				
+				
+				
+				
+				<li><a href="https://www.linkedin.com/in/sahildave1991/" class="icon alt fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+				
+				
+			</ul>
+		</div>
+	</footer>
+</div>
+
+<!-- Scripts -->
+	<script src="/jekyll-trial/assets/js/jquery.min.js"></script>
+	<script src="/jekyll-trial/assets/js/jquery.scrolly.min.js"></script>
+	<script src="/jekyll-trial/assets/js/jquery.scrollex.min.js"></script>
+	<script src="/jekyll-trial/assets/js/skel.min.js"></script>
+	<script src="/jekyll-trial/assets/js/util.js"></script>
+	<!--[if lte IE 8]><script src="/jekyll-trial/assets/js/ie/respond.min.js"></script><![endif]-->
+	<script src="/jekyll-trial/assets/js/main.js"></script>
+
+
+</body>
+
+</html>
