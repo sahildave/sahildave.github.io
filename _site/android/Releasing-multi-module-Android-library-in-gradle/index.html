@@ -57,6 +57,8 @@
 		
 		    
 		
+		    
+		
 		
 		    
 		        <li><a href="/android.html">Android</a></li>
@@ -68,6 +70,10 @@
 		
 		    
 		
+		    
+		
+		    
+		        <li><a href="/portfolio.html">Portfolio</a></li>
 		    
 		
 	</ul>
@@ -95,7 +101,7 @@ In this post I would share how we release multiple split libraries and have inte
 
 <p>The problem arises when you try to release the super-library and its pom file includes an <code class="highlighter-rouge">unspecified</code> version number for the core-library in the dependency node.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
 <span class="nt">&lt;project</span> <span class="na">xsi:schemaLocation=</span><span class="s">"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"</span> <span class="na">xmlns=</span><span class="s">"http://maven.apache.org/POM/4.0.0"</span>
     <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;modelVersion&gt;</span>4.0.0<span class="nt">&lt;/modelVersion&gt;</span>
@@ -120,8 +126,7 @@ In this post I would share how we release multiple split libraries and have inte
     <span class="c">&lt;!-- Highlighted --&gt;</span>
   <span class="nt">&lt;/dependencies&gt;</span>
 <span class="nt">&lt;/project&gt;</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="highlighted-above">Highlighted above:</h3>
 <ul>
@@ -139,7 +144,7 @@ In this post I would share how we release multiple split libraries and have inte
 
 <p>We can inject a function just after pom evaluation is done. We would go through each dependency added in the pom file and edit the particular dependency node if its version is <code class="highlighter-rouge">unspecified</code>. You should check for both, <code class="highlighter-rouge">groupId</code> and <code class="highlighter-rouge">version</code>.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>uploadArchives {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>uploadArchives {
     repositories {
         mavenDeployer {
             repository(url: "file://${buildDir}/outputs/maven")
@@ -161,19 +166,17 @@ In this post I would share how we release multiple split libraries and have inte
         }
     }
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Now the <code class="highlighter-rouge">core-library</code> dependency in the pom file looks like:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;dependency&gt;
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;dependency&gt;
   &lt;groupId&gt;lib-groupId&lt;/groupId&gt;
   &lt;artifactId&gt;core-library&lt;/artifactId&gt;
   &lt;version&gt;0.0.1&lt;/version&gt;
   &lt;scope&gt;compile&lt;/scope&gt;
 &lt;/dependency&gt;
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Now the dependency is release ready and the client can integrate the super library. Also the sub libraries can be released as separate modules.</p>
 

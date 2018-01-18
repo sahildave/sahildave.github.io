@@ -57,6 +57,8 @@
 		
 		    
 		
+		    
+		
 		
 		    
 		        <li><a href="/android.html">Android</a></li>
@@ -68,6 +70,10 @@
 		
 		    
 		
+		    
+		
+		    
+		        <li><a href="/portfolio.html">Portfolio</a></li>
 		    
 		
 	</ul>
@@ -97,7 +103,7 @@ In this post I would add product flavors to one of the libraries that I am worki
   <p>app/build.gradle</p>
 </blockquote>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>productFlavors {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>productFlavors {
     free {
         applicationId "xyz.sahildave.flavoredlibrary.free"
     }
@@ -105,8 +111,7 @@ In this post I would add product flavors to one of the libraries that I am worki
         applicationId "xyz.sahildave.flavoredlibrary.paid"
     }
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>You can now create sourceSets folders <code class="highlighter-rouge">app/src/paid/</code> and <code class="highlighter-rouge">app/src/free/</code> parallel to <code class="highlighter-rouge">app/src/main/</code>. The common classes and resources can stay in <code class="highlighter-rouge">app/src/main</code> while the flavor dependent code can go in the respective folders. Hold on to this concept, we’d use it later.</p>
 
@@ -120,7 +125,7 @@ In this post I would add product flavors to one of the libraries that I am worki
   <p>library/build.gradle</p>
 </blockquote>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>android {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>android {
     publishNonDefault true
     productFlavors {
         sdk1521 {
@@ -135,8 +140,7 @@ In this post I would add product flavors to one of the libraries that I am worki
         }
     }
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>For using these two product flavors in the demo app, I created two different configurations with the same SDK versions.</p>
 
@@ -144,7 +148,7 @@ In this post I would add product flavors to one of the libraries that I am worki
   <p>app/build.gradle</p>
 </blockquote>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>android {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>android {
     // Other configurations and buildtypes
     productFlavors {
         app1521 {
@@ -171,8 +175,7 @@ dependencies {
     app1521DebugCompile project(path: ':mylibrary', configuration: 'sdk1521Debug')
     app1524DebugCompile project(path: ':mylibrary', configuration: 'sdk1524Debug')
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>I have only created the debug configurations because I wanted to test the integration in the demo app and not release it on any store.</p>
 
@@ -186,7 +189,7 @@ dependencies {
   <p>library/build.gradle</p>
 </blockquote>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>android {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>android {
     publishNonDefault true
     productFlavors {
         sdk1521 {
@@ -206,8 +209,7 @@ dependencies {
     sdk1524Compile 'com.android.support:appcompat-v7:24.2.1'
     sdk1521Compile 'com.android.support:appcompat-v7:21.0.3'
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Lint does not give a warning for flavored apps (tried in AS 2.1 and AS 2.2) but you can try to replicate it by creating a separate application module and setting <code class="highlighter-rouge">compileSdkVersion</code> and support library version different. You’d see this lint warning:</p>
 
@@ -225,7 +227,7 @@ There are some combinations of libraries, or tools and libraries, that are incom
   <p>app/build.gradle</p>
 </blockquote>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>android {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>android {
     // Other configurations and buildtypes
     productFlavors {
         app1521 {
@@ -253,13 +255,12 @@ dependencies {
     app1521DebugCompile 'com.android.support:appcompat-v7:21.0.3'
     app1524DebugCompile 'com.android.support:appcompat-v7:24.2.0'
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="3-appcompatactivity-not-available-in-flavor-targeting-21">3. AppCompatActivity not available in flavor targeting 21</h3>
 <p>Now that we have made the flavor app1521 and sdk1521 dependent on <code class="highlighter-rouge">support-library</code> 21+, we can’t extend the good old <code class="highlighter-rouge">AppCompatActivity</code> and have to fallback to ActionBarActivity. For this we use the flexibility of <code class="highlighter-rouge">sourcesSets</code>. We create the parallel folders and abstract out the superclass for <code class="highlighter-rouge">LibraryActivity</code>. This way we can have different superclass dependent upon the flavor of the library we are dealing with. The plan is to make the <code class="highlighter-rouge">FlavoredActivity</code> extend <code class="highlighter-rouge">ActionBarActivity</code> in sdk1521 and <code class="highlighter-rouge">AppCompatActivity</code> in sdk1524:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>library
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>library
     |
     |--src
     |    |--main
@@ -276,28 +277,25 @@ dependencies {
     |    |    |--java
     |    |    |    |--xyz.sahildave.mylibrary
     |    |    |    |    |--FlavoredActivity.java
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <blockquote>
   <p>Flavor: sdk1521</p>
 </blockquote>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>public abstract class FlavoredActivity extends ActionBarActivity {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public abstract class FlavoredActivity extends ActionBarActivity {
     abstract String generateLibraryText();
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <blockquote>
   <p>Flavor: sdk1524</p>
 </blockquote>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>public abstract class FlavoredActivity extends AppCompatActivity {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public abstract class FlavoredActivity extends AppCompatActivity {
     abstract String generateLibraryText();
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 <p>Now that we have abstracted out the <code class="highlighter-rouge">FlavoredActivity</code>, we can extend it in our main <code class="highlighter-rouge">LibraryActivity</code>. The same thing can be done for other flavor dependent entities.</p>
 
 <p>You can see all of this running in action at this project repo. https://github.com/sahildave/Flavored-Library</p>
