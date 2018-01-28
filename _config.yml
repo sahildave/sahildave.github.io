@@ -10,7 +10,7 @@ country: India
 
 # homepage tiles
 tiles-source: pages # accepts "posts" or "pages"
-tiles-count: 2
+tiles-count: 4
 
 # social settings
 github_url: https://github.com/sahildave/
