@@ -4,7 +4,7 @@ title: Sketch Gists — Useful snippets for plugin development
 description:
 image: assets/images/sketch-gists.png
 permalink: :categories/:title/
-categories: Design
+categories: Blog
 ---
 
 Last week I was developing an internal tool to create a design workflow for my workplace. The process involved creating a style guide for a new project by setting up the branding colours, typefaces, shadows and scrim. All went well until it was required to convert the text layers into symbols so as to generalise them as well.

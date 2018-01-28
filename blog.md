@@ -1,20 +1,20 @@
 ---
 layout: landing
-title: Design
-landing-title: 'Design'
+title: Blog
+landing-title: 'Blog'
 nav-menu: true
-description: 'All things Design.<br />Posts related to Sketch.'
+description: 'All things written.<br />Android, Design.'
 image: null
-style: style2
+style: style1
 ---
 <!-- Main -->
 <div id="main" class="alt">
 	<section class="spotlights">
-		{% for post in site.categories["Design"] %}
+		{% for post in site.categories["Blog"] %}
 			<section>
 				{% if post.image %}
 					<a href="{{ site.baseurl }}{{ post.url }}" class="image">
-						<img src="{{ site.baseurl }}/{{ post.image }}" alt="" data-position="25% 25%" />
+						<img src="{{ site.baseurl }}/{{ post.image }}" alt="" data-position="center center" />
 					</a>
 				{% endif %}
 				<div class="content">

@@ -6,8 +6,10 @@ description: null
 image: null
 author: null
 ---
-I have been designing and developing for more than 3 years.
+I have been designing and developing for more than 4 years.
 
-Currently at Juspay Technologies, Bangalore, I create systems and bridges between design and development teams.
+Currently in Bangalore, I love to create user-centric design for the problems at hand. If there is a need to develop them, I can do that as well.
 
-I’ve also helped in creating "Juspay Safe”; The world’s first mobile payment browser for secure 1–Click experience. It’s being used by all top companies in India including Uber, Amazon and Flipkart.
+In the past, I’ve also helped in creating "Juspay Safe”; The world’s first mobile payment browser used by all major companies including Uber, Amazon and Flipkart. I had my own digital library startup where I had designed & developed Android app, dashboards and website. 
+
+I love to travel and make sure I am out of the city at least once a month. My last favourite destination was Taiwan.

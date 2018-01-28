@@ -1,16 +1,16 @@
 ---
 layout: landing
-title: Android
-landing-title: 'Android'
+title: Work
+landing-title: 'Work'
 nav-menu: true
-description: 'All things Android.<br />Blogs, gists and libraries for Android.'
-image:
-style: style1
+description: 'All things created.<br />Portfolio, Case Study.'
+image: null
+style: style2
 ---
 <!-- Main -->
 <div id="main" class="alt">
 	<section class="spotlights">
-		{% for post in site.categories["Android"] %}
+		{% for post in site.categories["Work"] %}
 			<section>
 				{% if post.image %}
 					<a href="{{ site.baseurl }}{{ post.url }}" class="image">
@@ -22,9 +22,9 @@ style: style1
 						<header class="major">
 							<h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
 						</header>
-						<p>{{ post.excerpt }}</p>
+						<p>{{ post.description }}</p>
 						<ul class="actions">
-							<li><a href="{{ site.baseurl }}{{ post.url }}" class="button">Read more</a></li>
+							<li><a href="{{ site.baseurl }}{{ post.url }}" class="button">Take a Peek</a></li>
 						</ul>
 					</div>
 				</div>

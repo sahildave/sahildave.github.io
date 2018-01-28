@@ -1,17 +1,12 @@
 # site settings
 title: Sahil Dave
-subtitle:
 email: sahildave1991@gmail.com
 description: Design + Dev + Create
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.sahildave.xyz" # the base hostname & protocol for your site
-author:
-street_address: 1234 Somewhere Road
 city: Bangalore
 state: KA
-zip_code: 55555
 country: India
-phone: (+91) 9829 88 0095
 
 # homepage tiles
 tiles-source: pages # accepts "posts" or "pages"

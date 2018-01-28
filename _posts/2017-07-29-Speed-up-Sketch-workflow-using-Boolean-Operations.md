@@ -4,7 +4,7 @@ title: Speed up Sketch workflow using Boolean Operations
 description:
 image: assets/images/boolean_header.png
 permalink: :categories/:title/
-categories: Design
+categories: Blog
 ---
 
 Boolean operations are a very powerful tool in any Product and/or Graphics design application. A complicated looking shape can be constructed in no time using the four options present in Sketch, namely Union, Subtract, Intersect and Difference.

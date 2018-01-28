@@ -4,7 +4,7 @@ title: Product Flavors for Android Library
 description: Product flavors is a powerful feature of the gradle plugin in Android Studio. Several developers use it to create free/paid or full/demo versions, releasing customized versions of their product. In…
 image:
 permalink: :categories/:title/
-categories: Android
+categories: Blog
 ---
 
 Product flavors is a powerful feature of the gradle plugin in Android Studio. Several developers use it to create free/paid or full/demo versions, releasing customized versions of their product.
