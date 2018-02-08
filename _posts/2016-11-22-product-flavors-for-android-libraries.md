@@ -16,7 +16,7 @@ Using product flavors on a regular applications is easy. Just add the productFla
 
 > app/build.gradle
 
-```
+``` java
 productFlavors {
     free {
         applicationId "xyz.sahildave.flavoredlibrary.free"
