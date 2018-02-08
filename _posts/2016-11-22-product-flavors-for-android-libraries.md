@@ -16,7 +16,7 @@ Using product flavors on a regular applications is easy. Just add the productFla
 
 > app/build.gradle
 
-``` java
+``` groovy
 productFlavors {
     free {
         applicationId "xyz.sahildave.flavoredlibrary.free"
@@ -38,7 +38,7 @@ Please note that publishing of all variants are not enabled by default. You need
 
 > library/build.gradle
 
-``` 
+``` groovy
 android {
     publishNonDefault true
     productFlavors {
@@ -60,7 +60,7 @@ For using these two product flavors in the demo app, I created two different con
 
 >app/build.gradle
 
-``` java
+``` groovy
 android {
     // Other configurations and buildtypes
     productFlavors {
@@ -101,7 +101,7 @@ While you are building the flavored library, you’d want to use the correct sup
 
 >library/build.gradle
 
-``` java
+``` groovy
 android {
     publishNonDefault true
     productFlavors {
@@ -136,7 +136,7 @@ Now that the library variants are dependent on different versions of support lib
 
 >app/build.gradle
 
-``` java
+``` groovy
 android {
     // Other configurations and buildtypes
     productFlavors {

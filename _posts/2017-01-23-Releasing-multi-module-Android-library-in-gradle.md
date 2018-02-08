@@ -18,7 +18,7 @@ In this post I would share how we release multiple split libraries and have inte
 
 The problem arises when you try to release the super-library and its pom file includes an `unspecified` version number for the core-library in the dependency node.
 
-```
+``` xml
 <?xml version="1.0" encoding="UTF-8"?>
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -58,7 +58,7 @@ When the client adds it in the their dependencies list, it wont compile throwing
 
 We can inject a function just after pom evaluation is done. We would go through each dependency added in the pom file and edit the particular dependency node if its version is `unspecified`. You should check for both, `groupId` and `version`.
 
-```
+``` groovy
 uploadArchives {
     repositories {
         mavenDeployer {
@@ -85,7 +85,7 @@ uploadArchives {
 
 Now the `core-library` dependency in the pom file looks like:
 
-```
+``` xml
 <dependency>
   <groupId>lib-groupId</groupId>
   <artifactId>core-library</artifactId>

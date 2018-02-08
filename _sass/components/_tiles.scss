@@ -35,7 +35,7 @@
 			overflow: hidden;
 			position: relative;
 			width: 40%;
-
+			
 			.image {
 				display: none;
 			}
@@ -95,7 +95,7 @@
 
 			&:hover {
 				&:before {
-					opacity: 0.3;
+					opacity: 0.5;
 				}
 			}
 
