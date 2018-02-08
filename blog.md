@@ -4,7 +4,7 @@ title: Blog
 landing-title: 'Blog'
 nav-menu: true
 description: 'All things written.<br />Android, Design.'
-image: null
+image: assets/images/blog.jpg
 style: style1
 ---
 <!-- Main -->

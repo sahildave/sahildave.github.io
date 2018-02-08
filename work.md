@@ -4,7 +4,7 @@ title: Work
 landing-title: 'Work'
 nav-menu: true
 description: 'All things created.<br />Portfolio, Case Study.'
-image: null
+image: assets/images/work.jpg
 style: style2
 ---
 <!-- Main -->

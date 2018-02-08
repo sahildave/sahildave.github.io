@@ -27,19 +27,22 @@
         @include vendor('transition', 'opacity #{_duration(banner)} ease');
         @include vendor('transition-delay', '0.75s');
         @include vendor('pointer-events', 'none');
-        background-color: _palette(bg);
+        background-color: _palette(fg-bold);
         content: '';
         display: block;
         height: 100%;
         left: 0;
-        opacity: 0.75;
+        opacity: 0.7;
         position: absolute;
         top: 0;
         width: 100%;
         z-index: 1;
     }
     h1 {
+        color: _palette(bg);
+        margin: 0 0 0 0;
         font-size: 3.25em;
+        text-shadow: 0 0 3px  _palette(fg-bold);
     }
     >.inner {
         @include vendor('transition', ( 'opacity 1.5s ease', 'transform 0.5s ease-out', 'filter 0.5s ease', '-webkit-filter 0.5s ease'));
@@ -68,17 +71,17 @@
             > :first-child {
                 margin-left: 0;
             }
-            p {
-                font-size: 0.7em;
+            h4 {
                 font-weight: _font(weight-bold);
+                color: _palette(bg);
                 letter-spacing: _font(letter-spacing-alt);
                 text-transform: uppercase;
+                text-shadow: 0 0 3px _palette(fg-bold);
             }
         }
     }
     &.major {
-        height: 75vh;
-        min-height: 30em;
+        height: 60vh;
         max-height: 50em;
         &.alt {
             opacity: 0.75;
