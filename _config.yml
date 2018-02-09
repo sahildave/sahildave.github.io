@@ -20,6 +20,13 @@ cv_url:
 
 # build settings
 markdown: kramdown
+highlighter: rouge
+
+# Markdown Processors
+kramdown:
+  input: GFM
+  auto_ids: true
+  syntax_highlighter: rouge
 
 sass:
   style: compressed

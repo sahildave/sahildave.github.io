@@ -16,7 +16,7 @@ Using product flavors on a regular applications is easy. Just add the productFla
 
 > app/build.gradle
 
-```
+``` groovy
 productFlavors {
     free {
         applicationId "xyz.sahildave.flavoredlibrary.free"
@@ -38,7 +38,7 @@ Please note that publishing of all variants are not enabled by default. You need
 
 > library/build.gradle
 
-```
+``` groovy
 android {
     publishNonDefault true
     productFlavors {
@@ -60,7 +60,7 @@ For using these two product flavors in the demo app, I created two different con
 
 >app/build.gradle
 
-```
+``` groovy
 android {
     // Other configurations and buildtypes
     productFlavors {
@@ -95,13 +95,13 @@ I have only created the debug configurations because I wanted to test the integr
 
 ## Potential Bugs
 
-###1. Mismatched Support Library Version in the Library Module
+### 1. Mismatched Support Library Version in the Library Module
 
 While you are building the flavored library, you’d want to use the correct support library with the corresponding library flavor, i.e.
 
 >library/build.gradle
 
-```
+``` groovy
 android {
     publishNonDefault true
     productFlavors {
@@ -130,13 +130,13 @@ Lint does not give a warning for flavored apps (tried in AS 2.1 and AS 2.2) but 
 This support library should not use a different version (24) than the compileSdkVersion (21):
 There are some combinations of libraries, or tools and libraries, that are incompatible, or can lead to bugs. One such incompatibility is compiling with a version of the Android support libraries that is not the latest version (or in particular, a version lower than your targetSdkVersion.)
 
-###2. Multiple Support Library Versions in App Module
+### 2. Multiple Support Library Versions in App Module
 
 Now that the library variants are dependent on different versions of support library, the current dependencies system in the app module would use two versions of support library at the same time for the flavor 1521. To cope with this problem, you should make the app variants depend upon the correct support library versions as well.
 
 >app/build.gradle
 
-```
+``` groovy
 android {
     // Other configurations and buildtypes
     productFlavors {
@@ -192,7 +192,7 @@ library
 
 >Flavor: sdk1521
 
-```
+``` java
 public abstract class FlavoredActivity extends ActionBarActivity {
     abstract String generateLibraryText();
 }
@@ -200,7 +200,7 @@ public abstract class FlavoredActivity extends ActionBarActivity {
 
 >Flavor: sdk1524
 
-```
+``` java
 public abstract class FlavoredActivity extends AppCompatActivity {
     abstract String generateLibraryText();
 }

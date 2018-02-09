@@ -32,7 +32,7 @@ First method is generic, where a list and a key is taken as parameters and name 
 2. `findPageByName` the pages parameter can be fetched from the document by using `doc.pages()`.
 3. `findSymbolByName` list of symbols can be obtained by, again, using the document. The `getSymbols(doc)` function looks like this.
 
-```
+``` javascript
 /**
  * Get all the symbols for a document.
  * @param {MSDocument} doc

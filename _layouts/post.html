@@ -8,27 +8,27 @@
 
 {% include head.html %}
 
-<body>
-{% include header.html %}
-<!-- Main -->
-<div id="main" class="alt">
+<body id="post">
+    {% include header.html %}
+    <!-- Main -->
+    <div id="main" class="alt">
+        <!-- One -->
+        <section id="one">
+            <div class="inner">
+                <header class="major">
+                    <h1>{{ page.title }}</h1>
+                </header>
+                {% if page.image and page.hide_image_in_post != true %}
+                <span class="image main">
+                    <img src="{{ site.baseurl }}/{{ page.image }}" alt="" />
+                </span> {% endif %}
 
-<!-- One -->
-<section id="one">
-	<div class="inner">
-		<header class="major">
-			<h1>{{ page.title }}</h1>
-		</header>
-		{% if page.image and  page.hide_image_in_post != true %}
-    <span class="image main">
-      <img src="{{ site.baseurl }}/{{ page.image }}" alt="" />
-    </span>{% endif %}
-		<p>{{ content }}</p>
-	</div>
-</section>
+                <p>{{ content }}</p>
+            </div>
+        </section>
 
-</div>
-  {% include footer.html %}
+    </div>
+    {% include footer.html %}
 
 </body>
 
