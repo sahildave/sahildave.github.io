@@ -47,7 +47,11 @@ We would ask them about their experience with the app. If they were a returning 
 
 # The Product
 
+> Logo image
+
 Eventually, we had a running product. Ostrich ran, pretty fast, as long as it had food. They say that the Ostrich eats everything and so did we. We did corporate marketing, created and sold merchandise, travelled everyday hours in scorching heat in public transports to deliver a book, built side projects, worked out of 3 different places, organised meetups and kept our customers happy. We had over a thousand returning customers and much more readers through our corporate ventures.
+
+
 
 > We even placed our books in a gym. What about that!
 

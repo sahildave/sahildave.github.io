@@ -12,6 +12,46 @@
 		}
 	}
 
+	.case-study {
+		padding-left: 10%;
+		padding-right: 10%;
+	}
+
+	#shadow {
+		box-shadow: 0 10px 8px -6px rgba(0,0,0,0.2); 
+	}
+	
+	#padding-extra {
+		margin: 10% 0px 0px 0px;
+	}
+
+	#autocaption > * { 
+		margin: 0px 0px 10% 0px;
+		padding: 0px;
+		border: 7px solid white;
+		background: #fff;
+		display: inline-block;
+		box-shadow: 0 10px 8px -6px rgba(0,0,0,0.2); 
+	  }
+	#autocaption figure img { 
+		width: 100%; height: auto; 
+	}
+	#autocaption figure figcaption { 
+		padding: 5px;
+		text-align: left;
+		color: #333;
+	}
+
+	#autocaption figure figcaption:first-letter { 
+		text-transform: uppercase; 
+	}
+	
+	@media screen and (max-width: 600px) {
+		#autocaption figure { 
+			width: 90%; 
+		}
+	} 
+	
 	header {
 		&.major {
 			width: -moz-max-content;

@@ -12,15 +12,15 @@ inner: 65em);
 // Font.
 $font: ( family: ('Source Sans Pro', Helvetica, sans-serif), 
 family-fixed: ('Source Code Pro', monospace), 
-weight: 300, 
-weight-bold: 600, 
+weight: 400, 
+weight-bold: 700, 
 letter-spacing: 0.025em, 
 letter-spacing-alt: 0.25em);
 // Palette.
 $palette: ( bg: #f4f4f4, 
 bg-alt: #FFFFFF, 
 fg: #434343, 
-text: #4a4a4a,
+text: #666666,
 fg-dark: #2a2f4a, 
 fg-bold: #4d526b, 
 fg-light: rgba(244, 244, 255, 0.2), 

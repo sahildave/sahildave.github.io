@@ -122,13 +122,26 @@
 	}
 
 	blockquote {
-		border-left: solid 4px _palette(border);
+		border-left: 4px solid _palette(border);
+		font-weight: _font(weight);
 		font-style: italic;
-		font-size: 1.3em;
-		font-weight: _font(weight-bold);
+		font-size: 1.2em;
+		margin: 1.5em 10px;
+		padding: 0.5em 10px;
 		margin: 0 0 _size(element-margin) 0;
-		padding: (_size(element-margin) / 4) 0 (_size(element-margin) / 4) _size(element-margin);
-	}
+		padding: (_size(element-margin) / 4) 0 (_size(element-margin) / 4) _size(element-margin);quotes: "\201C""\201D""\2018""\2019";
+	  }
+	  blockquote:before {
+		color: _palette(border);
+		content: "\201C";
+		font-size: 4em;
+		line-height: 0.1em;
+		margin-right: 0.25em;
+		vertical-align: -0.4em;
+	  }
+	  blockquote p {
+		display: inline;
+	  }
 
 	code {
 		background: _palette(border-light);
