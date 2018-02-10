@@ -2,7 +2,7 @@
 layout: study
 title: Ostrich Books
 description: We wanted to inspire a billion people to read and learn.
-image: assets/images/ostrich/app-showcase.png
+image: assets/images/ostrich/ostrich-header.png
 excerpt: Ostrich Books was started to solve problems with book availability and the high cost. Books are either not available in the local store or are costly if ordered online. Getting suggestion online is even worse. If you are an avid reader, you'd not like the Amazon and Goodreads recommendation system.  If you are an avid reader, you'd have a really bad time online.
 permalink: :categories/:title/
 categories: Work
@@ -107,15 +107,12 @@ hide_image_in_post: true
 		</blockquote>
 	</section>
 	<section id="padding-extra">
-		<p>In the end, after an app update was released, we'd have learned a lot from the process and implement the design
-		changes in our social media posts as well. I think I won't be wrong saying that iterating UI design helped us in
-		improving our social media content too.<br>
-		<br>
 		Another result of rapid prototyping was that our internal processes were also made rapid. We would do the <b>User
 		Research</b> while delivering the book. We would ask them about their experience with the app. If they were a
 		returning user, we would have a list of old conversations and interview them about the latest changes that they
 		see.<br>
-		<br></p>
+		<br>
+		<p></p>
 		<div class="center"><img id="" src="{{ site.baseurl }}/assets/images/ostrich/notif.png"></div>
 		<blockquote>
 			Notifications played an important role. I made a GCM module where in you could send a trending Facebook post and it
@@ -143,6 +140,11 @@ hide_image_in_post: true
 		</div>
 	</section>
 	<section id="padding-extra">
+		<p>In the end, after an app update was released, we'd have learned a lot from the process and implement the design
+		changes in our social media posts as well. I think I won't be wrong saying that iterating UI design helped us in
+		improving our social media content too.</p>
+	</section>
+	<section id="padding-extra">
 		<div class="row">
 			<div class="6u 12u$(small)">
 				<blockquote>
@@ -163,21 +165,21 @@ hide_image_in_post: true
 				</blockquote>
 			</div>
 			<div class="6u$ 12u$(small) center" id="autocaption"><img alt=
-			"I used the system font, Roboto, so to keep the app size minimum, under 5 MB." src=
+			"I used the system font, Roboto, so as to keep the app size minimum, under 4 MB." src=
 			"{{ site.baseurl }}/assets/images/ostrich/color-font.png"></div>
 		</div>
 	</section>
 	<section id="padding-extra">
 		<p>The users loved the simplicity of the app. You had only two diverging flows - you are either looking to borrow a
-		book or lend it. When you are borrowing a book you were also given an option to borrow a specially packaged
+		book or lend it. When you were borrowing a book you were also given an option to borrow a specially packaged
 		collection. Lending a book was easier. Either speak the book title, enter it or just scan the book's barcode.<br>
 		<br>
 		I had designed the "Enter Book Title" card, with intricate detail in the animation choreography, to keep user's
 		attention to the same place.<br>
 		<br>
 		The "Profile page" component is now commonly known as "Bottom Sheet", but was nowhere to be seen in 2015. I had
-		always visioned a UI where all the temporary pages like Settings, Profile etc are floating in at an elevation. This
-		doesn't intrude the user's normal flow.<br>
+		always envisioned a UI where all the temporary pages like Settings, Profile etc float over the main UI. This doesn't
+		intrude the user's normal flow.<br>
 		<br>
 		Another major component which became popular was the <a href="https://github.com/sahildave/Search-View-Layout">Search
 		View Layout</a>. I eventually released it on GitHub and with only a single line you could integrate a beautiful
@@ -187,13 +189,13 @@ hide_image_in_post: true
 		<div class="row">
 			<div class="6u 12u$(small)" style="text-align: center;">
 				<img src="{{ site.baseurl }}/assets/images/ostrich/inline-search.gif" style="width: 75%;">
-				<h6 style="padding: 2em;">I wanted the user's eye to remain on the card and used inline crossfade animation for
-				that.</h6>
+				<h5 style="padding: 2em;">Enter Book Title: I wanted the user's eye to remain on the card and used inline crossfade
+				animation for that.</h5>
 			</div>
 			<div class="6u$ 12u$(small)" style="text-align: center;">
 				<img src="{{ site.baseurl }}/assets/images/ostrich/profile.gif" style="width: 75%;">
-				<h6 style="padding: 2em;">Profile screen had a translate up animation, now called a bottom sheet. This was one of
-				the components which became mainstream.</h6>
+				<h5 style="padding: 2em;">Profile screen had a translate up animation, now called a bottom sheet. This was one of
+				the components which became mainstream.</h5>
 			</div>
 		</div>
 	</section>
@@ -202,12 +204,12 @@ hide_image_in_post: true
 			<div class="6u 12u$(small)" style="text-align: center;">
 				<iframe height="320" src="https://drive.google.com/file/d/1rR9CcfhelBeDcTAFN1IxustPcI6AgcGe/preview" width=
 				"75%"></iframe>
-				<h6 style="padding: 2em;">User flow for searching and borrowing a book.</h6>
+				<h5 style="padding: 2em;">Borrowing a book.</h5>
 			</div>
 			<div class="6u$ 12u$(small)" style="text-align: center;">
 				<iframe height="320" src="https://drive.google.com/file/d/1C8Qz1Gxg2FF8hyghqrPonRlSElQAx9by/preview" width=
 				"75%"></iframe>
-				<h6 style="padding: 2em;">User flow for searching and lending a book.</h6>
+				<h5 style="padding: 2em;">Lending a book.</h5>
 			</div>
 		</div>
 	</section>
@@ -231,11 +233,12 @@ hide_image_in_post: true
 		</div>
 	</section>
 	<section id="padding-extra">
-		<div class="center" id="autocaption"><img alt="Who wouldn't love these cute little bookmarks" src=
+		<div class="center" id="autocaption"><img alt="Who wouldn't love these cute little bookmarks?" src=
 		"{{ site.baseurl }}/assets/images/ostrich/bookmarks.jpg"></div>
 	</section>
 	<section>
-		<div class="center" id="autocaption"><img alt="We held events" src=
+		<div class="center" id="autocaption"><img alt=
+		"Ostrich events: We sold books, coasters, notebooks at many startup like PayPal, redBus." src=
 		"{{ site.baseurl }}/assets/images/ostrich/event.png"></div>
 	</section>
 	<section id="padding-extra">

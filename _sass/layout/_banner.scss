@@ -24,9 +24,6 @@
     position: relative;
     top: -3.25em;
     &:after {
-        @include vendor('transition', 'opacity #{_duration(banner)} ease');
-        @include vendor('transition-delay', '0.75s');
-        @include vendor('pointer-events', 'none');
         background-color: _palette(fg-bold);
         content: '';
         display: block;
@@ -45,7 +42,6 @@
         text-shadow: 0 0 3px  _palette(fg-bold);
     }
     >.inner {
-        @include vendor('transition', ( 'opacity 1.5s ease', 'transform 0.5s ease-out', 'filter 0.5s ease', '-webkit-filter 0.5s ease'));
         padding: 0 !important;
         position: relative;
         z-index: 2;
@@ -123,7 +119,6 @@
         }
         >.inner {
             @include vendor('filter', 'blur(0.125em)');
-            @include vendor('transform', 'translateX(-0.5em)');
             opacity: 0;
         }
     }

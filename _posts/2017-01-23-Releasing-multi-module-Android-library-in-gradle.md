@@ -52,7 +52,9 @@ The problem arises when you try to release the super-library and its pom file in
 
 When the client adds it in the their dependencies list, it wont compile throwing an error:
 
-> Failed to resolve: MultiLibrary.core-library:unspecified
+```
+Failed to resolve: MultiLibrary.core-library:unspecified
+```
 
 ## Solution
 

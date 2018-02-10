@@ -14,9 +14,9 @@ In this post I would add product flavors to one of the libraries that I am worki
 
 Using product flavors on a regular applications is easy. Just add the productFlavors block and you are good to go.
 
+``` groovy
 > app/build.gradle
 
-``` groovy
 productFlavors {
     free {
         applicationId "xyz.sahildave.flavoredlibrary.free"
@@ -36,9 +36,10 @@ Creating the product flavor in the library’s `build.gradle` file is basically 
 Please note that publishing of all variants are not enabled by default. You need to use the `publishNonDefault` variable in the `android` scope. Read more about `publishNonDefault` here.
 
 
-> library/build.gradle
 
 ``` groovy
+> library/build.gradle
+
 android {
     publishNonDefault true
     productFlavors {
@@ -58,9 +59,9 @@ android {
 
 For using these two product flavors in the demo app, I created two different configurations with the same SDK versions.
 
+``` groovy
 >app/build.gradle
 
-``` groovy
 android {
     // Other configurations and buildtypes
     productFlavors {
@@ -99,9 +100,9 @@ I have only created the debug configurations because I wanted to test the integr
 
 While you are building the flavored library, you’d want to use the correct support library with the corresponding library flavor, i.e.
 
+``` groovy
 >library/build.gradle
 
-``` groovy
 android {
     publishNonDefault true
     productFlavors {
@@ -126,17 +127,18 @@ dependencies {
 
 Lint does not give a warning for flavored apps (tried in AS 2.1 and AS 2.2) but you can try to replicate it by creating a separate application module and setting `compileSdkVersion` and support library version different. You’d see this lint warning:
 
->
+```
 This support library should not use a different version (24) than the compileSdkVersion (21):
 There are some combinations of libraries, or tools and libraries, that are incompatible, or can lead to bugs. One such incompatibility is compiling with a version of the Android support libraries that is not the latest version (or in particular, a version lower than your targetSdkVersion.)
+```
 
 ### 2. Multiple Support Library Versions in App Module
 
 Now that the library variants are dependent on different versions of support library, the current dependencies system in the app module would use two versions of support library at the same time for the flavor 1521. To cope with this problem, you should make the app variants depend upon the correct support library versions as well.
 
+``` groovy
 >app/build.gradle
 
-``` groovy
 android {
     // Other configurations and buildtypes
     productFlavors {
@@ -190,17 +192,17 @@ library
     |    |    |    |    |--FlavoredActivity.java
 ```
 
+``` java
 >Flavor: sdk1521
 
-``` java
 public abstract class FlavoredActivity extends ActionBarActivity {
     abstract String generateLibraryText();
 }
 ```
 
+``` java
 >Flavor: sdk1524
 
-``` java
 public abstract class FlavoredActivity extends AppCompatActivity {
     abstract String generateLibraryText();
 }

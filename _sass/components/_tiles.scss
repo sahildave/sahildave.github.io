@@ -82,7 +82,6 @@
 			}
 
 			&:after {
-				background-color: transparentize(_palette(fg), 0.75);
 				content: '';
 				display: block;
 				height: 100%;

@@ -5,12 +5,6 @@
 ///
 
 /* Header */
-
-	@include keyframes('reveal-header') {
-		0% { top: -4em; opacity: 0; }
-		100% { top: 0; opacity: 1; }
-	}
-
 	#header {
 		@include vendor('display', 'flex');
 		@include vendor('background-image', 'url("")');
@@ -38,10 +32,6 @@
 			padding: 0 1.5em;
 
 			strong {
-				@include vendor('transition', (
-					'background-color #{_duration(transition)} ease-in-out',
-					'color #{_duration(transition)} ease-in-out'
-				));
 				background-color: _palette(fg);
 				color: _palette(bg);
 				display: inline-block;
@@ -104,7 +94,6 @@
 					}
 
 					&:after {
-						@include vendor('transition', 'opacity #{_duration(transition)} ease-in-out');
 						background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="24" height="32" viewBox="0 0 24 32" preserveAspectRatio="none"><style>line { stroke-width: 2px; stroke: #{_palette(highlight)}; }</style><line x1="0" y1="11" x2="24" y2="11" /><line x1="0" y1="21" x2="24" y2="21" /><line x1="0" y1="16" x2="24" y2="16" /></svg>');
 						opacity: 0;
 						z-index: 1;
@@ -128,14 +117,10 @@
 		}
 
 		&.reveal {
-			@include vendor('animation', 'reveal-header 0.35s ease');
 			background-color: _palette(fg);
 		}
 
 		&.alt {
-			@include vendor('transition', 'opacity #{_duration(banner)} ease');
-			@include vendor('transition-delay', '0.75s');
-			@include vendor('animation', 'none');
 			background-color: transparent;
 			box-shadow: none;
 			position: absolute;

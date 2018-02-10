@@ -17,6 +17,7 @@
 			@include vendor('display', 'flex');
 			@include vendor('flex-direction', 'row');
 			background-color: desaturate(lighten(_palette(bg-alt), 2), 1);
+			margin-bottom: 1em;
 
 			> .image1 {
 				background-position: center center;
@@ -130,10 +131,9 @@
 			}
 		}
 
-		@include breakpoint(medium) {
+		@include breakpoint(small) {
 			> section {
 				display: block;
-				margin-bottom: 2em;
 
 				> .image2 {
 					width: 0%;
