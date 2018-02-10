@@ -80,7 +80,8 @@ nav-menu: true
     </section>
     <section id="padding-extra">
         <blockquote>
-            GitFlow helped me weave through the branches.<br>I had connected BitBucket, Crashlytics, Trello and Slack for quick crash logging and Trello card assignments.
+            Being the solo developer, I built the Android app, laid down the foundation for the backend, created serverless modules, created admin panels and many other side projects.<br><br>
+            I also lead the product marketing and community engagement.
         </blockquote>
         <p>As the internet was undergoing an incredible transformation in India and the number of Android users was increasing by the day, I chose to go with Google's Material Design. It was 2015 and users were getting comfortable with this new design system. 
         <br><br>
@@ -128,11 +129,6 @@ nav-menu: true
             </div>
         </div>
     </section>
-     <!--    <section>
-        <div class="center">
-            <img src="assets/images/ostrich/logo.png" alt="The many variations of the logo">
-        </div>
-    </section> -->
     <section id="padding-extra">
         <div class="row">
             <div class="6u 12u$(small)">
@@ -157,6 +153,12 @@ nav-menu: true
             </div>
         </div>
     </section>
+    <section id="padding-extra">
+        <p>The users loved the simplicity of the app. You had only two diverging flows - you are either looking to borrow a book or lend it. When you are borrowing a book you were also given an option to borrow a specially packaged collection. Lending a book was easier. Either speak the book title, enter it or just scan the book's barcode.
+        <br><br>I had designed the "Enter Book Title" card, with intricate detail in the animation choreography, to keep user's attention to the same place.
+        <br><br>The "Profile page" component is now commonly known as "Bottom Sheet", but was nowhere to be seen in 2015. I had always visioned a UI where all the temporary pages like Settings, Profile etc are floating in at an elevation. This doesn't intrude the user's normal flow.
+        <br><br>Another major component which became popular was the <a href="https://github.com/sahildave/Search-View-Layout">Search View Layout</a>. I eventually released it on GitHub and with only a single line you could integrate a beautiful transition, which is now used by almost all Google Apps. 
+    </section>
     <section id="padding-extra" >
         <div class="row">
             <div class="6u 12u$(small)" style="text-align: center;">
@@ -165,7 +167,7 @@ nav-menu: true
             </div>
             <div class="6u$ 12u$(small)" style="text-align: center;">
                 <img style="width: 75%;" src="assets/images/ostrich/profile.gif">    
-                <h6 style="padding: 2em;">Profile screen had an elevation and came like what now is called a bottom sheet.</h6>
+                <h6 style="padding: 2em;">Profile screen had a translate up animation, now called a bottom sheet. This was one of the components which became mainstream.</h6>
           </div>
         </div>
     </section>
@@ -208,6 +210,9 @@ nav-menu: true
             <img src="assets/images/ostrich/event.png" alt="We held events">
         </div>
     </section>  
+    <section id="padding-extra">
+        <hr class="major">
+    </section>
     <section id="padding-extra" >
         <div class="row">
             <div class="6u 12u$(small)">
@@ -215,16 +220,15 @@ nav-menu: true
             </div>
             <div class="6u$ 12u$(small)">
                 <p>
-                As a result of this experience, I grew a lot professionally and personally. It takes a great deal of courage to get out of your bubble and do things for the first time. I can't even imagine how I went door to door to deliver a book, conversed with them about their experience, asked them for their suggestions, talked to a lot of authors, publishers & distributors.
+                As a result of this experience, I grew a lot professionally and personally. It takes a great deal of courage to get out of your bubble and do things for the first time. I can't even imagine how I went door to door to deliver a book, conversed with them about their experience, asked them for their suggestions, talked to a lot of authors, publishers &amp; distributors.
                 <br><br>
-                <strong> It was a helluva-ride!</strong>
                 </p>
             </div>
         </div>
     </section>
-    <section id="padding-extra">
+    <section id="padding">
         <div class="center"  id="autocaption">
-            <img src="assets/images/ostrich/tired.jpg" alt="Book delivery was a tiring job!">
+            <img src="assets/images/ostrich/tired.jpg" alt="<strong> It was a helluva-ride!</strong>">
         </div>
     </section>
 </div>
