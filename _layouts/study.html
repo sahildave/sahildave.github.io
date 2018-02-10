@@ -21,11 +21,11 @@
                     <h3>{{ page.description }}</h3>
                 </div>
                 {% if page.image and page.hide_image_in_post != true %}
-                <span class="image main">
-                    <img src="{{ site.baseurl }}/{{ page.image }}" alt="" />
-                </span> {% endif %}
-
-                <p>{{ content }}</p>
+                    <span class="image main">
+                        <img src="{{ site.baseurl }}/{{ page.image }}" alt="" />
+                    </span>
+                {% endif %}
+                {{ content }}
             </div>
         </section>
 
