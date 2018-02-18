@@ -152,7 +152,8 @@ hide_image_in_post: true
 					neck denoted the pace and the reach we wanted to have, respectively.
 				</blockquote>
 			</div>
-			<div class="6u$ 12u$(small) center" id="autocaption"><img alt="The many variations of the logo" src=
+			<div class="6u$ 12u$(small) center" id="autocaption">
+			<img alt="The many variations of the logo" src=
 			"{{ site.baseurl }}/assets/images/ostrich/logo.png"></div>
 		</div>
 	</section>

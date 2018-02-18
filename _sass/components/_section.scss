@@ -33,6 +33,11 @@
 		display: inline-block;
 		box-shadow: 0 10px 8px -6px rgba(0,0,0,0.2); 
 	  }
+	
+	#autocaption figure { 
+		width: 100%; 
+	}
+	
 	#autocaption figure img { 
 		width: 100%; height: auto; 
 	}
@@ -46,11 +51,7 @@
 		text-transform: uppercase; 
 	}
 	
-	@media screen and (max-width: 600px) {
-		#autocaption figure { 
-			width: 90%; 
-		}
-	} 
+
 	
 	header {
 		&.major {
