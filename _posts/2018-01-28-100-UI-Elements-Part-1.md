@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 100 UI Elements
+title: 100 UI Elements - Part 1
 description: Inspired by the 100 days of UI , I challenged myself to create 100 UI elements. But not all at once. Part 1/10
 image: assets/images/100elems/Header-001-010.png
 permalink: :categories/:title/
@@ -9,6 +9,8 @@ hide_image_in_post: true
 ---
 
 Inspired by the 100 days of UI , I challenged myself to create 100 UI elements. This is a 10 part series with 10 elements in every post.
+
+[Checkout Part 2 here]({{ site.baseurl }}/work/100-UI-Elements-Part-2/)
 
 ---
 

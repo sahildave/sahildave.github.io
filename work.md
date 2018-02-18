@@ -3,7 +3,7 @@ layout: landing
 title: Work
 landing-title: 'Work'
 nav-menu: true
-description: 'All things created.<br />Portfolio, Case Study.'
+description: 'All things created.<br />Portfolio, Case Studies.'
 image: assets/images/work.jpg
 style: style2
 button: Take a Peek
