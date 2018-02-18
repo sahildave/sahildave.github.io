@@ -12,6 +12,9 @@ excerpt_separator: <!--excerpt-->
 <p>A concept to solve Onboarding problems like player creation and user rentention.
 <br><br>
 The most difficult problem that a new gamer faces is choosing a player name. Another major problem is trying to find the best game to start his journey as a new player. This onboarding solves both.</p>
+<a href="https://www.behance.net/gallery/62128425/PlayStation-Onboarding-Concept" target="_blank">This was originally posted on behance.net</a>
+<br>
+<br>
 <br>
 <img src="/assets/images/playstation/ps-1.png" alt="" style="margin-top: -0.5em;">
 <img src="/assets/images/playstation/ps-2.png" alt="" style="margin-top: -0.5em;">
