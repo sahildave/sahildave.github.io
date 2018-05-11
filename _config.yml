@@ -7,6 +7,7 @@ url: "https://www.sahildave.xyz" # the base hostname & protocol for your site
 city: Bangalore
 state: KA
 country: India
+image: /assets/images/banner.jpg
 
 # homepage tiles
 tiles-source: pages # accepts "posts" or "pages"
@@ -18,6 +19,16 @@ linkedin_url: https://www.linkedin.com/in/sahildave1991/
 twitter_url: https://twitter.com/sahildave1991
 dribbble_url: https://dribbble.com/sahildave
 behance_url: https://www.behance.net/sahildave
+social:
+  name: Sahil
+  links:
+    - https://twitter.com/sahildave1991
+    - https://dribbble.com/sahildave
+    - https://www.linkedin.com/in/sahildave1991/
+    - https://www.behance.net/sahildave
+    - https://github.com/sahildave/ 
+author:
+  twitter: sahildave1991
 
 # build settings
 markdown: kramdown
@@ -31,3 +42,6 @@ kramdown:
 
 sass:
   style: compressed
+
+plugins:
+  - jekyll-seo-tag

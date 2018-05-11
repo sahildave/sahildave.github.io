@@ -3,7 +3,7 @@ layout: home
 title: Home
 landing-title: 'Hi, I am Sahil'
 description: null
-image: null
+image: assets/images/banner.jpg
 author: null
 ---
 I have been designing and developing for more than 4 years.
