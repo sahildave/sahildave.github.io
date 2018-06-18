@@ -45,6 +45,8 @@ local.properties
 *.suo
 *.user
 *.sln.docstates
+.vscode/
+.idea/
 
 # Build results
 

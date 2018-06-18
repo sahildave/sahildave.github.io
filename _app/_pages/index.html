@@ -1,0 +1,60 @@
+---
+layout: default
+title: Sahil Dave
+permalink: /
+thumb_force_logo: true
+---
+
+{% include amsf/core %}
+
+<!-- Article wrapper, limit width -->
+<article>
+  <!-- Post title -->
+  <header>
+    <h1 class="image-title">
+      Sahil Dave
+      <img src="{{ amsf_user_assets }}/svg/name.svg">
+    </h1>
+    <small>
+      I have been designing and developing for more than 4 years.
+      <br><br>Currently in India, I love to create user-centric design for the problems at hand. If there is a need to develop them, I can do that as well.
+    </small>
+
+    <div class="mid">
+      <ul>
+        {% if site.dribbble_url %}
+				<li><a href="{{ site.dribbble_url }}" title="dribbble" target="_blank">dribbble</a></li>
+				{% endif %}
+
+        {% if site.behance_url %}
+				<li><a href="{{ site.behance_url }}" title="behance" target="_blank">behance</a></li>
+				{% endif %}
+
+        {% if site.linkedin_url %}
+				<li><a href="{{ site.linkedin_url }}" title="linkedin" target="_blank">linkedin</a></li>
+				{% endif %}
+
+        {% if site.twitter_url %}
+				<li><a href="{{ site.twitter_url }}" title="twitter" target="_blank">twitter</a></li>
+				{% endif %}
+        
+        {% if site.mail_url %}
+				<li><a href="{{ site.mail_url }}" title="mail" target="_blank">contact</a></li>
+				{% endif %}
+        
+      </ul>
+    </div>
+  </header>
+
+  <div class="page-content">
+    <h2>Work</h2>
+    {% for post in site.tags.Work %}
+      {% include themes/{{ site.amsf_theme }}/includes/page-item.html %}
+    {% endfor %}
+
+    <h2>Blog</h2>
+    {% for post in site.tags.Blog %}
+      {% include themes/{{ site.amsf_theme }}/includes/page-item.html %}
+    {% endfor %}
+  </div>
+</article>
