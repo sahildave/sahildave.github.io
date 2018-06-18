@@ -1,0 +1,138 @@
+<!doctype html> <title>Product Flavors for Android Library - Sahil Dave</title> <meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"> <meta name=description content="Product flavors is a powerful feature of the gradle plugin in Android Studio. Several developers use it to create free/paid or full/demo versions, releasing customized versions of their product. In this post I would add product flavors to one of..."> <meta name=theme-color content=#00bcd4> <link rel=alternate href=/feed.xml type=application/atom+xml> <link rel=apple-touch-icon href=/apple-touch-icon.png> <link rel=icon href=/favicon.png type=image/png> <link rel=icon href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='196' height='196' viewBox='0 0 196 196'>  <path fill-rule='evenodd' stroke='#000' stroke-width='9' d='M88.176,57.836 L77.211,70.994 C74.373,66.092 70.245,62.996 63.924,62.996 C57.861,62.996 51.282,67.64 50.25,73.961 C47.67,90.344 87.402,83.507 82.242,116.144 C79.146,135.623 64.827,149.426 44.961,149.426 C31.545,149.426 22.902,141.686 18,130.463 L32.19,118.466 C33.609,125.948 39.285,132.656 47.412,132.656 C55.152,132.656 61.086,126.077 62.247,118.595 C63.795,108.533 55.023,105.695 47.799,102.728 C36.189,97.568 27.933,91.247 30.384,76.154 C32.964,60.029 47.025,47 63.408,47 C72.051,47 83.274,51.257 88.176,57.836 Z M95.2919095,146.846 L110.642909,49.58 L137.732909,49.58 C165.854909,49.58 181.463909,70.607 177.077909,98.342 C172.691909,125.69 149.987909,146.846 122.252909,146.846 L95.2919095,146.846 Z M127.025909,66.092 L116.834909,130.334 L119.930909,130.334 C143.279909,130.334 154.373909,117.434 157.469909,98.213 C160.823909,77.057 151.664909,66.092 130.121909,66.092 L127.025909,66.092 Z'/></svg>" sizes=any type=image/svg+xml> <link rel=mask-icon href=/mask-icon.svg color=#00bcd4> <link rel=manifest href=/manifest.json> <style>*,:after,:before{padding:0;margin:0;box-sizing:border-box}html{font-size:100%;-webkit-text-size-adjust:none;-moz-text-size-adjust:none;-ms-text-size-adjust:none;text-size-adjust:none;text-rendering:optimizelegibility;image-rendering:optimizequality;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;background:#fff}body{padding:0 24vw;margin:0 auto 0;font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;font-size:1.6vw;line-height:1.42857143;hanging-punctuation:first allow-end;color:#000;background:#fff;transition:all .2s ease}@media (max-width:1080px){body{padding-left:8vw;padding-right:8vw;font-size:2.24vw}}@media (max-width:640px){body{padding-left:4vw;padding-right:4vw;font-size:3.84vw}}@media (max-width:400px){body{font-size:5.12vw}}a{color:#000;text-decoration:none;transition:color .5s ease,border-color .5s ease,background .5s ease,opacity 1.5s ease}a:focus,a:hover{transition:color .1s ease,border-color .1s ease,background .1s ease,opacity .1s ease;text-decoration:underline;-webkit-text-decoration-skip:ink;text-decoration-skip:ink}hr{border:0}::-webkit-input-placeholder{color:#000;opacity:.2}:-ms-input-placeholder{color:#000;opacity:.2}::-ms-input-placeholder{color:#000;opacity:.2}:focus::-webkit-input-placeholder{color:#00bcd4}:focus:-ms-input-placeholder{color:#00bcd4}:focus::-ms-input-placeholder{color:#00bcd4}.js-system--apple{-webkit-font-feature-settings:"case","ss01","ss02";font-feature-settings:"case","ss01","ss02"}.navigation{padding-top:1.4vmax;padding-bottom:1.4vmax;margin-right:-1vmax;margin-left:-1vmax;font-size:60%;font-weight:700;letter-spacing:.45em;text-transform:uppercase}.navigation li{display:inline-block;line-height:2;list-style:none}.navigation li a{padding:.5em 1vmax}.navigation li a:focus,.navigation li a:hover{color:#00bcd4;text-decoration:none}.content{margin-bottom:8vmin}.content:after,.content:before{display:table;content:""}.content:after{clear:both}.content article>:last-child{margin-bottom:0!important}.content article>:last-child>:last-child{margin-bottom:0!important}.content article>:last-child>:last-child>:last-child{margin-bottom:0!important}.content article>:last-child>:last-child>:last-child>:last-child{margin-bottom:0!important}.content .post-content>:first-child{margin-top:0}.content .post-content>:first-child>:first-child{margin-top:0}.content a{font-weight:700}.content a:has(>code){-webkit-text-decoration-color:#00cc80;text-decoration-color:#00cc80}.content p{margin-bottom:1.6rem;line-height:1.71428571}.content header{display:-webkit-box;display:flex;padding-top:10vmin;padding-bottom:10vmin;margin-bottom:8vmin;-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column;-webkit-box-pack:center;justify-content:center;background:rgba(0,0,0,.02);padding-left:24vw;padding-right:24vw;margin-left:-24vw;margin-right:-24vw}@media (max-width:1080px){.content header{min-height:calc(50vh - 1.4vmax * 2 - 3ex);padding-top:16vmin;padding-bottom:8vmin;padding-left:8vw;padding-right:8vw;margin-left:-8vw;margin-right:-8vw}}@media (max-width:640px){.content header{padding-left:4vw;padding-right:4vw;margin-left:-4vw;margin-right:-4vw}}.content header h1{font-size:360%;font-weight:700;letter-spacing:-.04em;margin-left:-2px;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none;line-height:1.1}@media (max-width:640px){.content header h1{font-size:280%}}.content header small{display:block;margin-top:2vmin}.content h2,.content h3{margin:10vmin 0 1rem;font-size:72%;font-weight:400;opacity:.5}.content hr::before{display:block;content:'';width:3px;height:3px;margin:2em auto;border-radius:50%;background:#000;box-shadow:24px 0 0 0 #000,-24px 0 0 0 #000}.content code,.content pre{font-family:Menlo,Consolas,monospace;color:#00cc80}.content pre{background:rgba(0,136,255,.04)}.content code{font-size:92%;overflow-wrap:break-word}.content .highlight>pre,.content .highlighter-rouge pre.highlight,.content pre{padding:1.2vw;margin-left:-1.2vw;margin-right:-1.2vw;margin-bottom:1.8rem;overflow-x:auto;font-size:80%;line-height:1.71428571;-webkit-overflow-scrolling:touch}@media (max-width:1080px){.content .highlight>pre,.content .highlighter-rouge pre.highlight,.content pre{padding-left:8vw;padding-right:8vw;margin-left:-8vw;margin-right:-8vw}}@media (max-width:640px){.content .highlight>pre,.content .highlighter-rouge pre.highlight,.content pre{padding-left:4vw;padding-right:4vw;margin-left:-4vw;margin-right:-4vw}}.content .highlight>pre code,.content .highlighter-rouge pre.highlight code,.content pre code{overflow-wrap:normal}.post-modified-date{font-size:75%;opacity:.5}.footer{padding:8vmin 0 4vmin;font-size:75%;text-transform:lowercase}.footer ul li{display:inline}.footer ul li:after{padding:0 1vmax;content:" / ";opacity:.3}.footer ul li:last-child:after{content:none}@media print{*,:after,:before{background:0 0!important;color:#000!important;box-shadow:none!important;text-shadow:none!important}body{padding:10mm!important;margin:0!important}a,a:visited{text-decoration:none}.content header{min-height:0;padding-bottom:0}.content .post-content{max-width:100%!important}.content .post-content a[href]:after{content:" (" attr(href) ")";font-weight:400}pre{page-break-inside:avoid}h2,h3,p{orphans:3;widows:3}h2,h3{page-break-after:avoid}.footer,.navigation{display:none}}.highlight>pre,.highlighter-rouge pre.highlight{background:rgba(0,56,64,.02)}.highlight code,.highlighter-rouge code{color:#656e6f}.highlight .c1,.highlighter-rouge .c1{font-style:italic}.highlight .nc,.highlighter-rouge .nc{font-weight:700}.highlight .nf,.highlighter-rouge .nf{font-weight:700}.highlight .o,.highlighter-rouge .o{font-weight:700}.highlight .kc,.highlighter-rouge .kc{font-weight:700}.highlight .kd,.highlighter-rouge .kd{font-weight:700}.highlight .n,.highlighter-rouge .n{color:#00c9bd}.highlight .na,.highlighter-rouge .na{color:#00c9cb}.highlight .nc,.highlighter-rouge .nc{color:#009fce}.highlight .nf,.highlighter-rouge .nf{color:#0056ce}.highlight .nl,.highlighter-rouge .nl{color:#0048ce}.highlight .kc,.highlighter-rouge .kc{color:#a32660}.highlight .kd,.highlighter-rouge .kd{color:#a32651}.highlight .s2,.highlighter-rouge .s2{color:#a3bd2a}.highlight .s1,.highlighter-rouge .s1{color:#58c92a}.highlight .mi,.highlighter-rouge .mi{color:#0fc92a}.highlight .o,.highlighter-rouge .o{color:#00c965}.highlight .c1,.highlighter-rouge .c1{color:#558a55;opacity:.6}</style> <link rel=canonical href=https://in-sahildave.github.com/blog/product-flavors-for-android-libraries/ > <meta property=og:type content=article> <meta property=og:site_name content="Sahil Dave"> <meta property=og:title content="Product Flavors for Android Library"> <meta property=og:url content=https://in-sahildave.github.com/blog/product-flavors-for-android-libraries/ > <meta property=og:description content="Product flavors is a powerful feature of the gradle plugin in Android Studio. Several developers use it to create free/paid or full/demo versions, releasing customized versions of their product. In this post I would add product flavors to one of..."> <meta property=og:image content=https://in-sahildave.github.com/logo.png> <meta name=twitter:card content=summary_large_image> <meta name=twitter:site content=@sahildave1991> <meta name=twitter:creator content=@sahildave1991> <meta property=article:published_time content=2016-11-22T00:00:00+05:30> <meta property=article:modified_time content=2018-06-13T13:51:12+05:30> <meta name=twitter:label1 value=Words> <meta name=twitter:data1 value="1175 words"> <meta name=twitter:label2 value="Reading time"> <meta name=twitter:data2 value="5 mins"> <nav class=navigation> <ul> <li> <a href=/ > Home </a> </li> <li> <a href=/work/ > Work </a> </li> <li> <a href=/blog/ > Blog </a> </li> <li> <a href=/assets/cv.pdf target=_blank> Resume </a> </li> </ul> </nav> <main class=content role=main> <article> <header> <h1 title="Product Flavors for Android Library" data-title="Product Flavors for Android Library"> Product Flavors for Android Library<span class="dot dot--post"> </span> </h1> <small>Product flavors is a powerful feature of the gradle plugin in Android Studio. Several developers use it to create free/paid or full/demo versions, releasing customized versions of their product. In…</small> </header> <div class=post-content> <p>Product flavors is a powerful feature of the gradle plugin in Android Studio. Several developers use it to create free/paid or full/demo versions, releasing customized versions of their product. In this post I would add product flavors to one of the libraries that I am working on. This library is an enterprise entity and different clients have different requirements with respect to <code class=highlighter-rouge>minSdkVersion</code>, <code class=highlighter-rouge>targetSdkVersion</code>, support library versions and other internal dependencies.</p> <h2 id=product-flavors-on-applications>Product Flavors on Applications</h2> <p>Using product flavors on a regular applications is easy. Just add the productFlavors block and you are good to go.</p> <div class="language-groovy highlighter-rouge"><div class=highlight><pre class=highlight><code><span class=o>&gt;</span> <span class=n>app</span><span class=o>/</span><span class=n>build</span><span class=o>.</span><span class=na>gradle</span>
+
+<span class=n>productFlavors</span> <span class=o>{</span>
+    <span class=n>free</span> <span class=o>{</span>
+        <span class=n>applicationId</span> <span class=s2>"xyz.sahildave.flavoredlibrary.free"</span>
+    <span class=o>}</span>
+    <span class=n>paid</span> <span class=o>{</span>
+        <span class=n>applicationId</span> <span class=s2>"xyz.sahildave.flavoredlibrary.paid"</span>
+    <span class=o>}</span>
+<span class=o>}</span>
+</code></pre></div></div> <p>You can now create sourceSets folders <code class=highlighter-rouge>app/src/paid/</code> and <code class=highlighter-rouge>app/src/free/</code> parallel to <code class=highlighter-rouge>app/src/main/</code>. The common classes and resources can stay in <code class=highlighter-rouge>app/src/main</code> while the flavor dependent code can go in the respective folders. Hold on to this concept, we’d use it later.</p> <h2 id=product-flavors-in-android-library>Product Flavors in Android Library</h2> <p>Creating the product flavor in the library’s <code class=highlighter-rouge>build.gradle</code> file is basically the same as above, the thing that changes is the dependency management in the app module. Here I create 2 flavors with different sdk versions.</p> <p>Please note that publishing of all variants are not enabled by default. You need to use the <code class=highlighter-rouge>publishNonDefault</code> variable in the <code class=highlighter-rouge>android</code> scope. Read more about <code class=highlighter-rouge>publishNonDefault</code> here.</p> <div class="language-groovy highlighter-rouge"><div class=highlight><pre class=highlight><code><span class=o>&gt;</span> <span class=n>library</span><span class=o>/</span><span class=n>build</span><span class=o>.</span><span class=na>gradle</span>
+
+<span class=n>android</span> <span class=o>{</span>
+    <span class=n>publishNonDefault</span> <span class=kc>true</span>
+    <span class=n>productFlavors</span> <span class=o>{</span>
+        <span class=n>sdk1521</span> <span class=o>{</span>
+            <span class=n>minSdkVersion</span> <span class=mi>15</span>
+            <span class=n>targetSdkVersion</span> <span class=mi>21</span>
+            <span class=n>compileSdkVersion</span> <span class=mi>21</span>
+        <span class=o>}</span>
+        <span class=n>sdk1524</span> <span class=o>{</span>
+            <span class=n>minSdkVersion</span> <span class=mi>15</span>
+            <span class=n>targetSdkVersion</span> <span class=mi>24</span>
+            <span class=n>compileSdkVersion</span> <span class=mi>24</span>
+        <span class=o>}</span>
+    <span class=o>}</span>
+<span class=o>}</span>
+</code></pre></div></div> <p>For using these two product flavors in the demo app, I created two different configurations with the same SDK versions.</p> <div class="language-groovy highlighter-rouge"><div class=highlight><pre class=highlight><code><span class=o>&gt;</span><span class=n>app</span><span class=o>/</span><span class=n>build</span><span class=o>.</span><span class=na>gradle</span>
+
+<span class=n>android</span> <span class=o>{</span>
+    <span class=c1>// Other configurations and buildtypes</span>
+    <span class=n>productFlavors</span> <span class=o>{</span>
+        <span class=n>app1521</span> <span class=o>{</span>
+            <span class=n>minSdkVersion</span> <span class=mi>15</span>
+            <span class=n>targetSdkVersion</span> <span class=mi>21</span>
+            <span class=n>compileSdkVersion</span> <span class=mi>21</span>
+            <span class=n>applicationId</span> <span class=s2>"xyz.sahildave.flavoredlibrary.app1521"</span>
+        <span class=o>}</span>
+        <span class=n>app1524</span> <span class=o>{</span>
+            <span class=n>minSdkVersion</span> <span class=mi>15</span>
+            <span class=n>targetSdkVersion</span> <span class=mi>24</span>
+            <span class=n>compileSdkVersion</span> <span class=mi>24</span>
+            <span class=n>applicationId</span> <span class=s2>"xyz.sahildave.flavoredlibrary.app1524"</span>
+        <span class=o>}</span>
+    <span class=o>}</span>
+<span class=o>}</span>
+
+<span class=n>configurations</span> <span class=o>{</span>
+    <span class=n>app1521DebugCompile</span>
+    <span class=n>app1524DebugCompile</span>
+<span class=o>}</span>
+<span class=n>dependencies</span> <span class=o>{</span>
+    <span class=n>compile</span> <span class=s1>'com.android.support:appcompat-v7:24.2.0'</span>
+    <span class=n>app1521DebugCompile</span> <span class=nf>project</span><span class=o>(</span><span class=nl>path:</span> <span class=s1>':mylibrary'</span><span class=o>,</span> <span class=nl>configuration:</span> <span class=s1>'sdk1521Debug'</span><span class=o>)</span>
+    <span class=n>app1524DebugCompile</span> <span class=nf>project</span><span class=o>(</span><span class=nl>path:</span> <span class=s1>':mylibrary'</span><span class=o>,</span> <span class=nl>configuration:</span> <span class=s1>'sdk1524Debug'</span><span class=o>)</span>
+<span class=o>}</span>
+</code></pre></div></div> <p>I have only created the debug configurations because I wanted to test the integration in the demo app and not release it on any store.</p> <h2 id=potential-bugs>Potential Bugs</h2> <h3 id=1-mismatched-support-library-version-in-the-library-module>1. Mismatched Support Library Version in the Library Module</h3> <p>While you are building the flavored library, you’d want to use the correct support library with the corresponding library flavor, i.e.</p> <div class="language-groovy highlighter-rouge"><div class=highlight><pre class=highlight><code><span class=o>&gt;</span><span class=n>library</span><span class=o>/</span><span class=n>build</span><span class=o>.</span><span class=na>gradle</span>
+
+<span class=n>android</span> <span class=o>{</span>
+    <span class=n>publishNonDefault</span> <span class=kc>true</span>
+    <span class=n>productFlavors</span> <span class=o>{</span>
+        <span class=n>sdk1521</span> <span class=o>{</span>
+            <span class=n>minSdkVersion</span> <span class=mi>15</span>
+            <span class=n>targetSdkVersion</span> <span class=mi>21</span>
+            <span class=n>compileSdkVersion</span> <span class=mi>21</span>
+        <span class=o>}</span>
+        <span class=n>sdk1524</span> <span class=o>{</span>
+            <span class=n>minSdkVersion</span> <span class=mi>15</span>
+            <span class=n>targetSdkVersion</span> <span class=mi>24</span>
+            <span class=n>compileSdkVersion</span> <span class=mi>24</span>
+        <span class=o>}</span>
+    <span class=o>}</span>
+<span class=o>}</span>
+<span class=n>dependencies</span> <span class=o>{</span>
+<span class=c1>//    compile 'com.android.support:appcompat-v7:24.2.1'</span>
+    <span class=n>sdk1524Compile</span> <span class=s1>'com.android.support:appcompat-v7:24.2.1'</span>
+    <span class=n>sdk1521Compile</span> <span class=s1>'com.android.support:appcompat-v7:21.0.3'</span>
+<span class=o>}</span>
+</code></pre></div></div> <p>Lint does not give a warning for flavored apps (tried in AS 2.1 and AS 2.2) but you can try to replicate it by creating a separate application module and setting <code class=highlighter-rouge>compileSdkVersion</code> and support library version different. You’d see this lint warning:</p> <div class=highlighter-rouge><div class=highlight><pre class=highlight><code>This support library should not use a different version (24) than the compileSdkVersion (21):
+There are some combinations of libraries, or tools and libraries, that are incompatible, or can lead to bugs. One such incompatibility is compiling with a version of the Android support libraries that is not the latest version (or in particular, a version lower than your targetSdkVersion.)
+</code></pre></div></div> <h3 id=2-multiple-support-library-versions-in-app-module>2. Multiple Support Library Versions in App Module</h3> <p>Now that the library variants are dependent on different versions of support library, the current dependencies system in the app module would use two versions of support library at the same time for the flavor 1521. To cope with this problem, you should make the app variants depend upon the correct support library versions as well.</p> <div class="language-groovy highlighter-rouge"><div class=highlight><pre class=highlight><code><span class=o>&gt;</span><span class=n>app</span><span class=o>/</span><span class=n>build</span><span class=o>.</span><span class=na>gradle</span>
+
+<span class=n>android</span> <span class=o>{</span>
+    <span class=c1>// Other configurations and buildtypes</span>
+    <span class=n>productFlavors</span> <span class=o>{</span>
+        <span class=n>app1521</span> <span class=o>{</span>
+            <span class=n>minSdkVersion</span> <span class=mi>15</span>
+            <span class=n>targetSdkVersion</span> <span class=mi>21</span>
+            <span class=n>compileSdkVersion</span> <span class=mi>21</span>
+            <span class=n>applicationId</span> <span class=s2>"xyz.sahildave.flavoredlibrary.app1521"</span>
+        <span class=o>}</span>
+        <span class=n>app1524</span> <span class=o>{</span>
+            <span class=n>minSdkVersion</span> <span class=mi>15</span>
+            <span class=n>targetSdkVersion</span> <span class=mi>24</span>
+            <span class=n>compileSdkVersion</span> <span class=mi>24</span>
+            <span class=n>applicationId</span> <span class=s2>"xyz.sahildave.flavoredlibrary.app1524"</span>
+        <span class=o>}</span>
+    <span class=o>}</span>
+<span class=o>}</span>
+<span class=n>configurations</span> <span class=o>{</span>
+    <span class=n>app1521DebugCompile</span>
+    <span class=n>app1524DebugCompile</span>
+<span class=o>}</span>
+<span class=n>dependencies</span> <span class=o>{</span>
+<span class=c1>//    compile 'com.android.support:appcompat-v7:24.1.0'</span>
+    <span class=n>app1521DebugCompile</span> <span class=nf>project</span><span class=o>(</span><span class=nl>path:</span> <span class=s1>':mylibrary'</span><span class=o>,</span> <span class=nl>configuration:</span> <span class=s1>'sdk1521Debug'</span><span class=o>)</span>
+    <span class=n>app1524DebugCompile</span> <span class=nf>project</span><span class=o>(</span><span class=nl>path:</span> <span class=s1>':mylibrary'</span><span class=o>,</span> <span class=nl>configuration:</span> <span class=s1>'sdk1524Debug'</span><span class=o>)</span>
+    <span class=n>app1521DebugCompile</span> <span class=s1>'com.android.support:appcompat-v7:21.0.3'</span>
+    <span class=n>app1524DebugCompile</span> <span class=s1>'com.android.support:appcompat-v7:24.2.0'</span>
+<span class=o>}</span>
+</code></pre></div></div> <h3 id=3-appcompatactivity-not-available-in-flavor-targeting-21>3. AppCompatActivity not available in flavor targeting 21</h3> <p>Now that we have made the flavor app1521 and sdk1521 dependent on <code class=highlighter-rouge>support-library</code> 21+, we can’t extend the good old <code class=highlighter-rouge>AppCompatActivity</code> and have to fallback to ActionBarActivity. For this we use the flexibility of <code class=highlighter-rouge>sourcesSets</code>. We create the parallel folders and abstract out the superclass for <code class=highlighter-rouge>LibraryActivity</code>. This way we can have different superclass dependent upon the flavor of the library we are dealing with. The plan is to make the <code class=highlighter-rouge>FlavoredActivity</code> extend <code class=highlighter-rouge>ActionBarActivity</code> in sdk1521 and <code class=highlighter-rouge>AppCompatActivity</code> in sdk1524:</p> <div class=highlighter-rouge><div class=highlight><pre class=highlight><code>library
+    |
+    |--src
+    |    |--main
+    |    |    |--java
+    |    |    |    |--xyz.sahildave.mylibrary
+    |    |    |    |    |--LibraryActivity.java
+    |    |
+    |    |--sdk1521
+    |    |    |--java
+    |    |    |    |--xyz.sahildave.mylibrary
+    |    |    |    |    |--FlavoredActivity.java
+    |    |
+    |    |--sdk1524
+    |    |    |--java
+    |    |    |    |--xyz.sahildave.mylibrary
+    |    |    |    |    |--FlavoredActivity.java
+</code></pre></div></div> <div class="language-java highlighter-rouge"><div class=highlight><pre class=highlight><code><span class=o>&gt;</span><span class=nl>Flavor:</span> <span class=n>sdk1521</span>
+
+<span class=kd>public</span> <span class=kd>abstract</span> <span class=kd>class</span> <span class=nc>FlavoredActivity</span> <span class=kd>extends</span> <span class=n>ActionBarActivity</span> <span class=o>{</span>
+    <span class=kd>abstract</span> <span class=n>String</span> <span class=nf>generateLibraryText</span><span class=o>();</span>
+<span class=o>}</span>
+</code></pre></div></div> <div class="language-java highlighter-rouge"><div class=highlight><pre class=highlight><code><span class=o>&gt;</span><span class=nl>Flavor:</span> <span class=n>sdk1524</span>
+
+<span class=kd>public</span> <span class=kd>abstract</span> <span class=kd>class</span> <span class=nc>FlavoredActivity</span> <span class=kd>extends</span> <span class=n>AppCompatActivity</span> <span class=o>{</span>
+    <span class=kd>abstract</span> <span class=n>String</span> <span class=nf>generateLibraryText</span><span class=o>();</span>
+<span class=o>}</span>
+</code></pre></div></div> <p>Now that we have abstracted out the <code class=highlighter-rouge>FlavoredActivity</code>, we can extend it in our main <code class=highlighter-rouge>LibraryActivity</code>. The same thing can be done for other flavor dependent entities.</p> <p>You can see all of this running in action at this project repo. https://github.com/sahildave/Flavored-Library</p> <hr> <p>This post was originally seen <a href=https://android.jlelse.eu/product-flavors-for-android-library-d3b2d240fca2>here</a> on Medium.</p> <footer class=post-modified-date> <p> Updated <time datetime=" 2018-06-13T13:51:12+08:00 "> Wednesday, Jun 13, 2018 </time> </p> </footer> </div> </article> </main> <footer class=footer> <ul> <li><a href=/ >Sahil Dave</a></li> <li><a href=https://dribbble.com/sahildave title=dribbble target=_blank>dribbble</a></li> <li><a href=https://www.behance.net/sahildave title=behance target=_blank>behance</a></li> <li><a href=https://www.linkedin.com/in/sahildave1991/ title=linkedin target=_blank>linkedin</a></li> <li><a href=https://twitter.com/sahildave1991 title=twitter target=_blank>twitter</a></li> <li><a href=mailto:sahildave1991@gmail.com title=mail target=_blank>contact</a></li> </ul> </footer> <script>navigator.platform.match(/(Mac|iPhone|iPod|iPad)/i)&&document.body.classList.add("js-system--apple")</script> <script></script> <script>"serviceWorker"in navigator&&"in-sahildave.github.com"===window.location.hostname&&navigator.serviceWorker.register("/service-worker.js").then(function(e){console.log("ServiceWorker registration successful with scope: ",e.scope)}).catch(function(e){console.log("ServiceWorker registration failed: ",e)})</script> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-56407221-3"></script> <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","UA-56407221-3")</script>

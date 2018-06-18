@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
-gem 'github-pages'
-gem 'jekyll-seo-tag'
 
-group :jekyll_plugins do
-  # gem 'octopress-debugger'
+group :development do
+  gem 'jekyll', '3.7.0'
+  gem 'jekyll-last-modified-at'
+  gem 'match_regex'
+  gem 'stringex'
 end
