@@ -1,3 +1,8 @@
+<a name="1.1.11"></a>
+## 1.1.11 (2019-05-21)
+
+
+
 <a name="1.1.10"></a>
 ## [1.1.10](https://github.com/sparanoid/almace-scaffolding/compare/v1.1.9...v1.1.10) (2018-02-01)
 
