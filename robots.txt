@@ -1,4 +1,4 @@
 User-agent: *
 
 
-Sitemap: https://in-sahildave.github.com/sitemap.xml
+Sitemap: https://www.sahildave.com/sitemap.xml

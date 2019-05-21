@@ -1,0 +1,11 @@
+---
+layout: page
+title: Blog
+permalink: /blog/
+desc: All things written. Design, Android.
+---
+<div class="page-content">
+    {% for post in site.tags.Blog %}
+      {% include themes/{{ site.amsf_theme }}/includes/page-item.html %}
+    {% endfor %}
+</div>
