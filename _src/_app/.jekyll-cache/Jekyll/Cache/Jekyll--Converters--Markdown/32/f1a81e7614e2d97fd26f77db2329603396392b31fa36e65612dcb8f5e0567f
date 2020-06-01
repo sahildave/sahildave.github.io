@@ -1,3 +1,0 @@
-I"'<p>In the last post I had discussed how we are using product flavors to release different versions of the code base with minor changes. It had helped us serve different clients with different requirements.
-In this post I would share how we release multiple split libraries and have interdependencies similar to how Google releases play-services or appcompat libraries. It seems easy till the publishing day, until it is not! The problem with inter-dependency is maven does not add the version number in the pom file for local module dependencies.</p>
-:ET

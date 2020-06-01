@@ -264,3 +264,5 @@ jspm_packages
 # Optional REPL history
 .node_repl_history
 
+
+_src/_app/.jekyll-cache/

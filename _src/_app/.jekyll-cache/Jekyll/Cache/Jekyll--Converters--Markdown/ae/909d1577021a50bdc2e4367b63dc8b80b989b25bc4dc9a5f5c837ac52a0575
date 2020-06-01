@@ -1,3 +1,0 @@
-I"W<p>Product flavors is a powerful feature of the gradle plugin in Android Studio. Several developers use it to create free/paid or full/demo versions, releasing customized versions of their product.
-In this post I would add product flavors to one of the libraries that I am working on. This library is an enterprise entity and different clients have different requirements with respect to <code class="language-plaintext highlighter-rouge">minSdkVersion</code>, <code class="language-plaintext highlighter-rouge">targetSdkVersion</code>, support library versions and other internal dependencies.</p>
-:ET
