@@ -1,152 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<feed xmlns="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom">
   <title>Sahil Dave</title>
   <subtitle>Sahil Dave's Portfolio</subtitle>
-  <updated>2019-05-21T17:54:44+02:00</updated>
-  <id>https://www.sahildave.com/</id>
-  <generator uri="https://sparanoid.com/lab/amsf/" version="1.1.11">Almace Scaffolding</generator>
+  <updated>2020-06-01T18:28:23+02:00</updated>
+  <id>http://0.0.0.0:4321/</id>
+  <generator uri="https://sparanoid.com/lab/amsf/" version="2.0.18">Almace Scaffolding</generator>
 
-  <link rel="alternate" type="text/html" hreflang="en" href="https://www.sahildave.com/" />
-  <link rel="self" type="application/atom+xml" href="https://www.sahildave.com/feed.xml" />
+  <link rel="alternate" type="text/html" hreflang="en" href="http://0.0.0.0:4321/" />
+  <link rel="self" type="application/atom+xml" href="http://0.0.0.0:4321/feed.xml" />
 
   <author>
     <name>Sahil Dave</name>
-    <uri>https://www.sahildave.com/</uri>
-    <email>sahildave1991@gmail.com</email>
+    <uri>http://0.0.0.0:4321/</uri>
+    <email>hello@sahildave.com</email>
   </author>
 
   
@@ -157,21 +22,21 @@
 
       <entry>
         <title>Google Translate &amp;#8208; Ch. 1</title>
-        <id>https://www.sahildave.com/blog/google-translate-ch-1/</id>
-        <link rel="alternate" type="text/html" href="https://www.sahildave.com/blog/google-translate-ch-1/" />
+        <id>http://0.0.0.0:4321/blog/google-translate-ch-1/</id>
+        <link rel="alternate" type="text/html" href="http://0.0.0.0:4321/blog/google-translate-ch-1/" />
         <published>2019-01-22T00:00:00+01:00</published>
 
         
-          <updated>2019-05-21T17:45:02+02:00</updated>
+          <updated>2020-06-01T17:35:09+02:00</updated>
         
 
         <author>
           <name>Sahil Dave</name>
-          <uri>https://sahildave.xyz/</uri>
-          <email>sahildave1991@gmail.com</email>
+          <uri>https://www.sahildave.com/</uri>
+          <email>hello@sahildave.com</email>
         </author>
 
-        <content type="html" xml:base="https://www.sahildave.com/">
+        <content type="html" xml:base="http://0.0.0.0:4321/">
           
             &lt;p&gt;As a designer, I believe side projects are of utmost importance. You get to experiment with various scenarios working on a new topic and it dramatically enhances your skill. On the other hand, I also believe that designers are pretty protective about their work. We take immense shame in accepting if we fail at improving a product through design. But as they say, failing and failure are different things.&lt;/p&gt;
 
@@ -290,21 +155,21 @@ We’d be writing more about this endeavour as we progress. Stay tuned!&lt;/p&gt
 
       <entry>
         <title>Volt Sports</title>
-        <id>https://www.sahildave.com/work/Volt-Social-Sports/</id>
-        <link rel="alternate" type="text/html" href="https://www.sahildave.com/work/Volt-Social-Sports/" />
+        <id>http://0.0.0.0:4321/work/Volt-Social-Sports/</id>
+        <link rel="alternate" type="text/html" href="http://0.0.0.0:4321/work/Volt-Social-Sports/" />
         <published>2018-03-11T00:00:00+01:00</published>
 
         
-          <updated>2019-05-21T17:45:02+02:00</updated>
+          <updated>2020-06-01T17:35:09+02:00</updated>
         
 
         <author>
           <name>Sahil Dave</name>
-          <uri>https://sahildave.xyz/</uri>
-          <email>sahildave1991@gmail.com</email>
+          <uri>https://www.sahildave.com/</uri>
+          <email>hello@sahildave.com</email>
         </author>
 
-        <content type="html" xml:base="https://www.sahildave.com/">
+        <content type="html" xml:base="http://0.0.0.0:4321/">
           
             &lt;p&gt;Volt aims at teaming up people, sports and people who love sports. With Volt, you can host or join a match, book an arena for your team or compete in a tournament. All in one place!&lt;/p&gt;
 &lt;!--excerpt--&gt;
@@ -341,21 +206,21 @@ We’d be writing more about this endeavour as we progress. Stay tuned!&lt;/p&gt
 
       <entry>
         <title>Ostrich Books</title>
-        <id>https://www.sahildave.com/work/Case-Study-Ostrich/</id>
-        <link rel="alternate" type="text/html" href="https://www.sahildave.com/work/Case-Study-Ostrich/" />
+        <id>http://0.0.0.0:4321/work/Case-Study-Ostrich/</id>
+        <link rel="alternate" type="text/html" href="http://0.0.0.0:4321/work/Case-Study-Ostrich/" />
         <published>2018-03-03T00:00:00+01:00</published>
 
         
-          <updated>2019-05-21T17:45:02+02:00</updated>
+          <updated>2020-06-01T17:35:09+02:00</updated>
         
 
         <author>
           <name>Sahil Dave</name>
-          <uri>https://sahildave.xyz/</uri>
-          <email>sahildave1991@gmail.com</email>
+          <uri>https://www.sahildave.com/</uri>
+          <email>hello@sahildave.com</email>
         </author>
 
-        <content type="html" xml:base="https://www.sahildave.com/">
+        <content type="html" xml:base="http://0.0.0.0:4321/">
           
             &lt;p&gt;Ostrich Books was started to solve problems with book availability and the high cost. Books are either not available in the local store or are costly if ordered online. Getting suggestion online is even worse. If you are an avid reader, you’d not like the Amazon and Goodreads recommendation system. If you are an avid reader, you’d have a really bad time online.&lt;/p&gt;
 
@@ -488,21 +353,21 @@ Meet an author or chat with fellow readers at specially organised event.
 
       <entry>
         <title>PlayStation Onboarding Concept</title>
-        <id>https://www.sahildave.com/work/PlayStation-Onboarding-Concept/</id>
-        <link rel="alternate" type="text/html" href="https://www.sahildave.com/work/PlayStation-Onboarding-Concept/" />
+        <id>http://0.0.0.0:4321/work/PlayStation-Onboarding-Concept/</id>
+        <link rel="alternate" type="text/html" href="http://0.0.0.0:4321/work/PlayStation-Onboarding-Concept/" />
         <published>2018-02-18T00:00:00+01:00</published>
 
         
-          <updated>2019-05-21T17:45:02+02:00</updated>
+          <updated>2020-06-01T17:35:09+02:00</updated>
         
 
         <author>
           <name>Sahil Dave</name>
-          <uri>https://sahildave.xyz/</uri>
-          <email>sahildave1991@gmail.com</email>
+          <uri>https://www.sahildave.com/</uri>
+          <email>hello@sahildave.com</email>
         </author>
 
-        <content type="html" xml:base="https://www.sahildave.com/">
+        <content type="html" xml:base="http://0.0.0.0:4321/">
           
             &lt;p&gt;A concept to solve Onboarding problems like player creation and user rentention.
 &lt;br /&gt;&lt;br /&gt;
@@ -539,21 +404,21 @@ The most difficult problem that a new gamer faces is choosing a player name. Ano
 
       <entry>
         <title>Daily UI - Part 2</title>
-        <id>https://www.sahildave.com/work/100-UI-Elements-Part-2/</id>
-        <link rel="alternate" type="text/html" href="https://www.sahildave.com/work/100-UI-Elements-Part-2/" />
+        <id>http://0.0.0.0:4321/work/100-UI-Elements-Part-2/</id>
+        <link rel="alternate" type="text/html" href="http://0.0.0.0:4321/work/100-UI-Elements-Part-2/" />
         <published>2018-02-17T00:00:00+01:00</published>
 
         
-          <updated>2019-05-21T17:45:02+02:00</updated>
+          <updated>2020-06-01T17:35:09+02:00</updated>
         
 
         <author>
           <name>Sahil Dave</name>
-          <uri>https://sahildave.xyz/</uri>
-          <email>sahildave1991@gmail.com</email>
+          <uri>https://www.sahildave.com/</uri>
+          <email>hello@sahildave.com</email>
         </author>
 
-        <content type="html" xml:base="https://www.sahildave.com/">
+        <content type="html" xml:base="http://0.0.0.0:4321/">
           
             &lt;p&gt;Inspired by the 100 days of UI , I challenged myself to create 100 UI elements. This is a 10 part series with 10 elements in every post.&lt;/p&gt;
 
@@ -601,21 +466,21 @@ The most difficult problem that a new gamer faces is choosing a player name. Ano
 
       <entry>
         <title>Craigslist Redesign Concept</title>
-        <id>https://www.sahildave.com/work/Craigslist-Redesign-Concept/</id>
-        <link rel="alternate" type="text/html" href="https://www.sahildave.com/work/Craigslist-Redesign-Concept/" />
+        <id>http://0.0.0.0:4321/work/Craigslist-Redesign-Concept/</id>
+        <link rel="alternate" type="text/html" href="http://0.0.0.0:4321/work/Craigslist-Redesign-Concept/" />
         <published>2018-02-02T00:00:00+01:00</published>
 
         
-          <updated>2019-05-21T17:45:02+02:00</updated>
+          <updated>2020-06-01T17:35:09+02:00</updated>
         
 
         <author>
           <name>Sahil Dave</name>
-          <uri>https://sahildave.xyz/</uri>
-          <email>sahildave1991@gmail.com</email>
+          <uri>https://www.sahildave.com/</uri>
+          <email>hello@sahildave.com</email>
         </author>
 
-        <content type="html" xml:base="https://www.sahildave.com/">
+        <content type="html" xml:base="http://0.0.0.0:4321/">
           
             &lt;p&gt;This was a super fun project even with all the limitations that craigslist's information architecture had to offer. Redesigning craigslist as just another e-commerce website is not difficult; the challenge is keeping the returning user to feel at home.
 &lt;br /&gt;&lt;br /&gt;In this project, I focussed on making the website friendlier. A new look is created taking advantage of the widescreens that we have today.&lt;/p&gt;
@@ -650,21 +515,21 @@ The most difficult problem that a new gamer faces is choosing a player name. Ano
 
       <entry>
         <title>Daily UI - Part 1</title>
-        <id>https://www.sahildave.com/work/100-UI-Elements-Part-1/</id>
-        <link rel="alternate" type="text/html" href="https://www.sahildave.com/work/100-UI-Elements-Part-1/" />
+        <id>http://0.0.0.0:4321/work/100-UI-Elements-Part-1/</id>
+        <link rel="alternate" type="text/html" href="http://0.0.0.0:4321/work/100-UI-Elements-Part-1/" />
         <published>2018-01-28T00:00:00+01:00</published>
 
         
-          <updated>2019-05-21T17:45:02+02:00</updated>
+          <updated>2020-06-01T17:35:09+02:00</updated>
         
 
         <author>
           <name>Sahil Dave</name>
-          <uri>https://sahildave.xyz/</uri>
-          <email>sahildave1991@gmail.com</email>
+          <uri>https://www.sahildave.com/</uri>
+          <email>hello@sahildave.com</email>
         </author>
 
-        <content type="html" xml:base="https://www.sahildave.com/">
+        <content type="html" xml:base="http://0.0.0.0:4321/">
           
             &lt;p&gt;Inspired by the 100 days of UI , I challenged myself to create 100 UI elements. This is a 10 part series with 10 elements in every post.&lt;/p&gt;
 
@@ -712,21 +577,21 @@ The most difficult problem that a new gamer faces is choosing a player name. Ano
 
       <entry>
         <title>Sketch Plugin Gists</title>
-        <id>https://www.sahildave.com/blog/Sketch-Gists-Useful-snippets-for-plugin-development/</id>
-        <link rel="alternate" type="text/html" href="https://www.sahildave.com/blog/Sketch-Gists-Useful-snippets-for-plugin-development/" />
+        <id>http://0.0.0.0:4321/blog/Sketch-Gists-Useful-snippets-for-plugin-development/</id>
+        <link rel="alternate" type="text/html" href="http://0.0.0.0:4321/blog/Sketch-Gists-Useful-snippets-for-plugin-development/" />
         <published>2017-08-10T00:00:00+02:00</published>
 
         
-          <updated>2019-05-21T17:45:02+02:00</updated>
+          <updated>2020-06-01T17:35:09+02:00</updated>
         
 
         <author>
           <name>Sahil Dave</name>
-          <uri>https://sahildave.xyz/</uri>
-          <email>sahildave1991@gmail.com</email>
+          <uri>https://www.sahildave.com/</uri>
+          <email>hello@sahildave.com</email>
         </author>
 
-        <content type="html" xml:base="https://www.sahildave.com/">
+        <content type="html" xml:base="http://0.0.0.0:4321/">
           
             &lt;p&gt;Last week I was developing an internal tool to create a design workflow for my workplace. The process involved creating a style guide for a new project by setting up the branding colours, typefaces, shadows and scrim. All went well until it was required to convert the text layers into symbols so as to generalise them as well.&lt;/p&gt;
 
@@ -740,7 +605,7 @@ This makes the symbol not so customisable. For example, you’d have to create m
 &lt;p&gt;Until Sketch releases an update where you override all the properties in a text layer it would be good to convert all your text styles into text symbols and use them in your other symbols.
 In this article, I would share some snippets which acted as utils in my project. I kept these methods in a utils.js file and imported it by adding an import statement on top my main script.&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;@import ‘utils.js’&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@import ‘utils.js’&lt;/code&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;finding-page-layer-or-symbol&quot;&gt;Finding page, layer or symbol&lt;/h3&gt;
 
@@ -749,9 +614,9 @@ In this article, I would share some snippets which acted as utils in my project.
 &lt;p&gt;First method is generic, where a list and a key is taken as parameters and name of every element is compared with it. If there is a match, the same item is returned. The other functions are the following:&lt;/p&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;findLayerByName&lt;/code&gt; takes the artboard as the parameter and iterates over the &lt;code class=&quot;highlighter-rouge&quot;&gt;artboard.layers()&lt;/code&gt; list.&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;findPageByName&lt;/code&gt; the pages parameter can be fetched from the document by using &lt;code class=&quot;highlighter-rouge&quot;&gt;doc.pages()&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;findSymbolByName&lt;/code&gt; list of symbols can be obtained by, again, using the document. The &lt;code class=&quot;highlighter-rouge&quot;&gt;getSymbols(doc)&lt;/code&gt; function looks like this.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;findLayerByName&lt;/code&gt; takes the artboard as the parameter and iterates over the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;artboard.layers()&lt;/code&gt; list.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;findPageByName&lt;/code&gt; the pages parameter can be fetched from the document by using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;doc.pages()&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;findSymbolByName&lt;/code&gt; list of symbols can be obtained by, again, using the document. The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;getSymbols(doc)&lt;/code&gt; function looks like this.&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cm&quot;&gt;/**
@@ -769,19 +634,19 @@ In this article, I would share some snippets which acted as utils in my project.
 &lt;script src=&quot;https://gist.github.com/sahildave/9192956b791d57e5af9f64821d5b04c6.js&quot;&gt;&lt;/script&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;createArtboard&lt;/code&gt; function is self explanatory. It creates a new &lt;code class=&quot;highlighter-rouge&quot;&gt;MSArtboardGroup&lt;/code&gt;, sets its name, geometry and adds it to the current page. This can be made even more generic by taking the page as a parameter.&lt;/li&gt;
-  &lt;li&gt;There are two types of &lt;code class=&quot;highlighter-rouge&quot;&gt;createPage&lt;/code&gt; functions. First creates a new page and adds it to the document data. Important step is to call &lt;code class=&quot;highlighter-rouge&quot;&gt;doc.loadLayerListPanel()&lt;/code&gt; after you add the page, otherwise the page won’t appear on the left unless you collapse and expand the page list.
+  &lt;li&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;createArtboard&lt;/code&gt; function is self explanatory. It creates a new &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MSArtboardGroup&lt;/code&gt;, sets its name, geometry and adds it to the current page. This can be made even more generic by taking the page as a parameter.&lt;/li&gt;
+  &lt;li&gt;There are two types of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;createPage&lt;/code&gt; functions. First creates a new page and adds it to the document data. Important step is to call &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;doc.loadLayerListPanel()&lt;/code&gt; after you add the page, otherwise the page won’t appear on the left unless you collapse and expand the page list.
 The second function creates a blank page and renames it, as simple as that.&lt;/li&gt;
-  &lt;li&gt;Creating text layer also follows the same trend. One thing to remember is to add it to a page by &lt;code class=&quot;highlighter-rouge&quot;&gt;page.addLayers([layer]);&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Creating text layer also follows the same trend. One thing to remember is to add it to a page by &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;page.addLayers([layer]);&lt;/code&gt;.&lt;/li&gt;
   &lt;li&gt;Creating symbol from layer is a bit verbose. You take in a page, layer and the symbol name; add the layer to the page, convert the same layer to a new symbol, move this new symbol to the symbols page and remove the original symbol instance (which was added to the page).
-If you pass false in the third parameter of the call: &lt;code class=&quot;highlighter-rouge&quot;&gt;MSSymbolCreator. createSymbolFromLayers_withName_onSymbolsPage(layers, symbolName, true);&lt;/code&gt; it would be added to the current page.&lt;/li&gt;
+If you pass false in the third parameter of the call: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MSSymbolCreator. createSymbolFromLayers_withName_onSymbolsPage(layers, symbolName, true);&lt;/code&gt; it would be added to the current page.&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h3 id=&quot;show-symbols-page-get-all-symbols-get-last-symbol&quot;&gt;Show symbols page, get all symbols, get last symbol&lt;/h3&gt;
 
 &lt;script src=&quot;https://gist.github.com/sahildave/0533d4cae6e5280d3c1e69c4ae9830d2.js&quot;&gt;&lt;/script&gt;
 
-&lt;p&gt;Frankly, only the third function &lt;code class=&quot;highlighter-rouge&quot;&gt;getBottomSymbol&lt;/code&gt; is the interesting function in this gist. It compares the position of the symbols and use the compare function to return the appropriate integer. Comments are added to help you out.&lt;/p&gt;
+&lt;p&gt;Frankly, only the third function &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;getBottomSymbol&lt;/code&gt; is the interesting function in this gist. It compares the position of the symbols and use the compare function to return the appropriate integer. Comments are added to help you out.&lt;/p&gt;
 
 &lt;p&gt;I am now planning to release my workflow as a plugin. It essentially would help you out to set a theme for your project. It has inbuilt palette and typeface generator.&lt;/p&gt;
 
@@ -808,21 +673,21 @@ If you pass false in the third parameter of the call: &lt;code class=&quot;highl
 
       <entry>
         <title>Boolean Operations in Sketch</title>
-        <id>https://www.sahildave.com/blog/Speed-up-Sketch-workflow-using-Boolean-Operations/</id>
-        <link rel="alternate" type="text/html" href="https://www.sahildave.com/blog/Speed-up-Sketch-workflow-using-Boolean-Operations/" />
+        <id>http://0.0.0.0:4321/blog/Speed-up-Sketch-workflow-using-Boolean-Operations/</id>
+        <link rel="alternate" type="text/html" href="http://0.0.0.0:4321/blog/Speed-up-Sketch-workflow-using-Boolean-Operations/" />
         <published>2017-07-29T00:00:00+02:00</published>
 
         
-          <updated>2019-05-21T17:45:02+02:00</updated>
+          <updated>2020-06-01T17:35:09+02:00</updated>
         
 
         <author>
           <name>Sahil Dave</name>
-          <uri>https://sahildave.xyz/</uri>
-          <email>sahildave1991@gmail.com</email>
+          <uri>https://www.sahildave.com/</uri>
+          <email>hello@sahildave.com</email>
         </author>
 
-        <content type="html" xml:base="https://www.sahildave.com/">
+        <content type="html" xml:base="http://0.0.0.0:4321/">
           
             &lt;p&gt;Boolean operations are a very powerful tool in any Product and/or Graphics design application. A complicated looking shape can be constructed in no time using the four options present in Sketch, namely Union, Subtract, Intersect and Difference.&lt;/p&gt;
 
@@ -862,21 +727,21 @@ If you pass false in the third parameter of the call: &lt;code class=&quot;highl
 
       <entry>
         <title>Multi-module Android library</title>
-        <id>https://www.sahildave.com/blog/Releasing-multi-module-Android-library-in-gradle/</id>
-        <link rel="alternate" type="text/html" href="https://www.sahildave.com/blog/Releasing-multi-module-Android-library-in-gradle/" />
+        <id>http://0.0.0.0:4321/blog/Releasing-multi-module-Android-library-in-gradle/</id>
+        <link rel="alternate" type="text/html" href="http://0.0.0.0:4321/blog/Releasing-multi-module-Android-library-in-gradle/" />
         <published>2017-01-23T00:00:00+01:00</published>
 
         
-          <updated>2019-05-21T17:45:02+02:00</updated>
+          <updated>2020-06-01T17:35:09+02:00</updated>
         
 
         <author>
           <name>Sahil Dave</name>
-          <uri>https://sahildave.xyz/</uri>
-          <email>sahildave1991@gmail.com</email>
+          <uri>https://www.sahildave.com/</uri>
+          <email>hello@sahildave.com</email>
         </author>
 
-        <content type="html" xml:base="https://www.sahildave.com/">
+        <content type="html" xml:base="http://0.0.0.0:4321/">
           
             &lt;p&gt;In the last post I had discussed how we are using product flavors to release different versions of the code base with minor changes. It had helped us serve different clients with different requirements.
 In this post I would share how we release multiple split libraries and have interdependencies similar to how Google releases play-services or appcompat libraries. It seems easy till the publishing day, until it is not! The problem with inter-dependency is maven does not add the version number in the pom file for local module dependencies.&lt;/p&gt;
@@ -885,7 +750,7 @@ In this post I would share how we release multiple split libraries and have inte
 
 &lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
 
-&lt;p&gt;The problem arises when you try to release the super-library and its pom file includes an &lt;code class=&quot;highlighter-rouge&quot;&gt;unspecified&lt;/code&gt; version number for the core-library in the dependency node.&lt;/p&gt;
+&lt;p&gt;The problem arises when you try to release the super-library and its pom file includes an &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;unspecified&lt;/code&gt; version number for the core-library in the dependency node.&lt;/p&gt;
 
 &lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;project&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;xsi:schemaLocation=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;xmlns=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://maven.apache.org/POM/4.0.0&quot;&lt;/span&gt;
@@ -917,17 +782,17 @@ In this post I would share how we release multiple split libraries and have inte
 &lt;h3 id=&quot;highlighted-above&quot;&gt;Highlighted above:&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;strong&gt;groupId&lt;/strong&gt; is the rootProject of the library. Here the repo name MultiLibrary.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;version&lt;/strong&gt; is &lt;code class=&quot;highlighter-rouge&quot;&gt;unspecified&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;version&lt;/strong&gt; is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;unspecified&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;When the client adds it in the their dependencies list, it wont compile throwing an error:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Failed to resolve: MultiLibrary.core-library:unspecified
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Failed to resolve: MultiLibrary.core-library:unspecified
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
 
-&lt;p&gt;We can inject a function just after pom evaluation is done. We would go through each dependency added in the pom file and edit the particular dependency node if its version is &lt;code class=&quot;highlighter-rouge&quot;&gt;unspecified&lt;/code&gt;. You should check for both, &lt;code class=&quot;highlighter-rouge&quot;&gt;groupId&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;version&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;We can inject a function just after pom evaluation is done. We would go through each dependency added in the pom file and edit the particular dependency node if its version is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;unspecified&lt;/code&gt;. You should check for both, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;groupId&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;version&lt;/code&gt;.&lt;/p&gt;
 
 &lt;div class=&quot;language-groovy highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;uploadArchives&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;repositories&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
@@ -953,7 +818,7 @@ In this post I would share how we release multiple split libraries and have inte
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Now the &lt;code class=&quot;highlighter-rouge&quot;&gt;core-library&lt;/code&gt; dependency in the pom file looks like:&lt;/p&gt;
+&lt;p&gt;Now the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;core-library&lt;/code&gt; dependency in the pom file looks like:&lt;/p&gt;
 
 &lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
   &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;lib-groupId&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
@@ -988,24 +853,24 @@ In this post I would share how we release multiple split libraries and have inte
 
       <entry>
         <title>Product Flavors for Android Library</title>
-        <id>https://www.sahildave.com/blog/product-flavors-for-android-libraries/</id>
-        <link rel="alternate" type="text/html" href="https://www.sahildave.com/blog/product-flavors-for-android-libraries/" />
+        <id>http://0.0.0.0:4321/blog/product-flavors-for-android-libraries/</id>
+        <link rel="alternate" type="text/html" href="http://0.0.0.0:4321/blog/product-flavors-for-android-libraries/" />
         <published>2016-11-22T00:00:00+01:00</published>
 
         
-          <updated>2019-05-21T17:45:02+02:00</updated>
+          <updated>2020-06-01T17:35:09+02:00</updated>
         
 
         <author>
           <name>Sahil Dave</name>
-          <uri>https://sahildave.xyz/</uri>
-          <email>sahildave1991@gmail.com</email>
+          <uri>https://www.sahildave.com/</uri>
+          <email>hello@sahildave.com</email>
         </author>
 
-        <content type="html" xml:base="https://www.sahildave.com/">
+        <content type="html" xml:base="http://0.0.0.0:4321/">
           
             &lt;p&gt;Product flavors is a powerful feature of the gradle plugin in Android Studio. Several developers use it to create free/paid or full/demo versions, releasing customized versions of their product.
-In this post I would add product flavors to one of the libraries that I am working on. This library is an enterprise entity and different clients have different requirements with respect to &lt;code class=&quot;highlighter-rouge&quot;&gt;minSdkVersion&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;targetSdkVersion&lt;/code&gt;, support library versions and other internal dependencies.&lt;/p&gt;
+In this post I would add product flavors to one of the libraries that I am working on. This library is an enterprise entity and different clients have different requirements with respect to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;minSdkVersion&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;targetSdkVersion&lt;/code&gt;, support library versions and other internal dependencies.&lt;/p&gt;
 
 &lt;h2 id=&quot;product-flavors-on-applications&quot;&gt;Product Flavors on Applications&lt;/h2&gt;
 
@@ -1023,13 +888,13 @@ In this post I would add product flavors to one of the libraries that I am worki
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;You can now create sourceSets folders &lt;code class=&quot;highlighter-rouge&quot;&gt;app/src/paid/&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;app/src/free/&lt;/code&gt; parallel to &lt;code class=&quot;highlighter-rouge&quot;&gt;app/src/main/&lt;/code&gt;. The common classes and resources can stay in &lt;code class=&quot;highlighter-rouge&quot;&gt;app/src/main&lt;/code&gt; while the flavor dependent code can go in the respective folders. Hold on to this concept, we’d use it later.&lt;/p&gt;
+&lt;p&gt;You can now create sourceSets folders &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;app/src/paid/&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;app/src/free/&lt;/code&gt; parallel to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;app/src/main/&lt;/code&gt;. The common classes and resources can stay in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;app/src/main&lt;/code&gt; while the flavor dependent code can go in the respective folders. Hold on to this concept, we’d use it later.&lt;/p&gt;
 
 &lt;h2 id=&quot;product-flavors-in-android-library&quot;&gt;Product Flavors in Android Library&lt;/h2&gt;
 
-&lt;p&gt;Creating the product flavor in the library’s &lt;code class=&quot;highlighter-rouge&quot;&gt;build.gradle&lt;/code&gt; file is basically the same as above, the thing that changes is the dependency management in the app module. Here I create 2 flavors with different sdk versions.&lt;/p&gt;
+&lt;p&gt;Creating the product flavor in the library’s &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;build.gradle&lt;/code&gt; file is basically the same as above, the thing that changes is the dependency management in the app module. Here I create 2 flavors with different sdk versions.&lt;/p&gt;
 
-&lt;p&gt;Please note that publishing of all variants are not enabled by default. You need to use the &lt;code class=&quot;highlighter-rouge&quot;&gt;publishNonDefault&lt;/code&gt; variable in the &lt;code class=&quot;highlighter-rouge&quot;&gt;android&lt;/code&gt; scope. Read more about &lt;code class=&quot;highlighter-rouge&quot;&gt;publishNonDefault&lt;/code&gt; here.&lt;/p&gt;
+&lt;p&gt;Please note that publishing of all variants are not enabled by default. You need to use the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;publishNonDefault&lt;/code&gt; variable in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;android&lt;/code&gt; scope. Read more about &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;publishNonDefault&lt;/code&gt; here.&lt;/p&gt;
 
 &lt;div class=&quot;language-groovy highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;gradle&lt;/span&gt;
 
@@ -1115,9 +980,9 @@ In this post I would add product flavors to one of the libraries that I am worki
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Lint does not give a warning for flavored apps (tried in AS 2.1 and AS 2.2) but you can try to replicate it by creating a separate application module and setting &lt;code class=&quot;highlighter-rouge&quot;&gt;compileSdkVersion&lt;/code&gt; and support library version different. You’d see this lint warning:&lt;/p&gt;
+&lt;p&gt;Lint does not give a warning for flavored apps (tried in AS 2.1 and AS 2.2) but you can try to replicate it by creating a separate application module and setting &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;compileSdkVersion&lt;/code&gt; and support library version different. You’d see this lint warning:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;This support library should not use a different version (24) than the compileSdkVersion (21):
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;This support library should not use a different version (24) than the compileSdkVersion (21):
 There are some combinations of libraries, or tools and libraries, that are incompatible, or can lead to bugs. One such incompatibility is compiling with a version of the Android support libraries that is not the latest version (or in particular, a version lower than your targetSdkVersion.)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
@@ -1158,9 +1023,9 @@ There are some combinations of libraries, or tools and libraries, that are incom
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;3-appcompatactivity-not-available-in-flavor-targeting-21&quot;&gt;3. AppCompatActivity not available in flavor targeting 21&lt;/h3&gt;
-&lt;p&gt;Now that we have made the flavor app1521 and sdk1521 dependent on &lt;code class=&quot;highlighter-rouge&quot;&gt;support-library&lt;/code&gt; 21+, we can’t extend the good old &lt;code class=&quot;highlighter-rouge&quot;&gt;AppCompatActivity&lt;/code&gt; and have to fallback to ActionBarActivity. For this we use the flexibility of &lt;code class=&quot;highlighter-rouge&quot;&gt;sourcesSets&lt;/code&gt;. We create the parallel folders and abstract out the superclass for &lt;code class=&quot;highlighter-rouge&quot;&gt;LibraryActivity&lt;/code&gt;. This way we can have different superclass dependent upon the flavor of the library we are dealing with. The plan is to make the &lt;code class=&quot;highlighter-rouge&quot;&gt;FlavoredActivity&lt;/code&gt; extend &lt;code class=&quot;highlighter-rouge&quot;&gt;ActionBarActivity&lt;/code&gt; in sdk1521 and &lt;code class=&quot;highlighter-rouge&quot;&gt;AppCompatActivity&lt;/code&gt; in sdk1524:&lt;/p&gt;
+&lt;p&gt;Now that we have made the flavor app1521 and sdk1521 dependent on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;support-library&lt;/code&gt; 21+, we can’t extend the good old &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;AppCompatActivity&lt;/code&gt; and have to fallback to ActionBarActivity. For this we use the flexibility of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sourcesSets&lt;/code&gt;. We create the parallel folders and abstract out the superclass for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;LibraryActivity&lt;/code&gt;. This way we can have different superclass dependent upon the flavor of the library we are dealing with. The plan is to make the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;FlavoredActivity&lt;/code&gt; extend &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ActionBarActivity&lt;/code&gt; in sdk1521 and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;AppCompatActivity&lt;/code&gt; in sdk1524:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;library
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;library
     |
     |--src
     |    |--main
@@ -1181,18 +1046,18 @@ There are some combinations of libraries, or tools and libraries, that are incom
 
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;Flavor:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sdk1521&lt;/span&gt;
 
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;abstract&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;FlavoredActivity&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ActionBarActivity&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;abstract&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;generateLibraryText&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;abstract&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;FlavoredActivity&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ActionBarActivity&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;abstract&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;generateLibraryText&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;Flavor:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sdk1524&lt;/span&gt;
 
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;abstract&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;FlavoredActivity&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;AppCompatActivity&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;abstract&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;generateLibraryText&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;abstract&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;FlavoredActivity&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;AppCompatActivity&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;abstract&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;generateLibraryText&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Now that we have abstracted out the &lt;code class=&quot;highlighter-rouge&quot;&gt;FlavoredActivity&lt;/code&gt;, we can extend it in our main &lt;code class=&quot;highlighter-rouge&quot;&gt;LibraryActivity&lt;/code&gt;. The same thing can be done for other flavor dependent entities.&lt;/p&gt;
+&lt;p&gt;Now that we have abstracted out the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;FlavoredActivity&lt;/code&gt;, we can extend it in our main &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;LibraryActivity&lt;/code&gt;. The same thing can be done for other flavor dependent entities.&lt;/p&gt;
 
 &lt;p&gt;You can see all of this running in action at this project repo. https://github.com/sahildave/Flavored-Library&lt;/p&gt;
 

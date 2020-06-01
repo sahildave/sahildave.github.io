@@ -1,0 +1,115 @@
+//
+// User styles
+// -----------------------------------------------------------------------------
+// NOTE: the following user styles are designed for default theme Curtana
+
+// EXAMPLE: alternative title size
+// By default all heading levels have the same font size, but many people may
+// not like this, so here's an alternative font size stack:
+// .content {
+//   h2 { font-size: 108%; opacity: .8; }
+//   h3 { font-size: 96%;  opacity: .7; }
+//   h4 { font-size: 84%;  opacity: .6; }
+//   h5 { font-size: 72%;  opacity: .5; }
+//   h6 { font-size: 60%;  opacity: .4; }
+// }
+
+// EXAMPLE: alternative post title color
+// This is useful when you're using the custom color scheme.
+// .content { .list h2 a, header h1, header h1 a { color: var(--link-color); } }
+// .external span { background: var(--link-color); }
+
+// EXAMPLE: Custom typography for Chinese Traditional
+// :root {
+//   --fontstack-sans-serif: "Helvetica Neue", "Hiragino Sans GB", Arial, sans-serif;
+//   --fontstack-serif: Georgia, "Hiragino Mincho ProN", serif;
+// }
+
+// EXAMPLE: amsf.github.io custom appearance
+:root {
+  --fontstack-sans-serif: 'Source Sans Pro', sans-serif;
+  --fontstack-serif: 'Merriweather', serif;
+  --fontstack-default: var(--fontstack-sans-serif);
+  --code-color-h: calc(var(--link-color-h) + 10);
+  --code-color-s: calc(var(--link-color-s) * .2 + 40%);
+}
+
+.content {
+  h2 { font-size: 150%; opacity: .8; font-weight: bold;}
+  h3 { font-size: 96%; opacity: .7; }
+  h4 { font-size: 84%;  opacity: .6; }
+  h5 { font-size: 72%;  opacity: .5; }
+  h6 { 
+    font-size: 60%;  
+    opacity: .4;     
+    margin: 2vmin 0 8vmin;   
+  }
+  p {
+    line-height: calc(var(--line-height));
+  }
+
+  header {
+    --header-height: 10vh;
+    --space-header: var(--space-sm);
+    background: var(--bg-color-light);
+  
+    margin-top: 1vmin;
+    margin-bottom: 10vmin;
+    border-radius: 20px;
+    box-shadow:
+    0 2.2px 2.2px rgba(0, 0, 0, 0.017),
+    0 5.3px 5.4px rgba(0, 0, 0, 0.024),
+    0 9.9px 10.1px rgba(0, 0, 0, 0.03),
+    0 17.6px 18.1px rgba(0, 0, 0, 0.036),
+    0 33px 33.8px rgba(0, 0, 0, 0.043),
+    0 79px 81px rgba(0, 0, 0, 0.06);
+  }
+}
+
+.list {
+  margin: 0;
+  h2 { 
+    margin: 0;
+    a:hover, a:focus {
+      color: var(--link-color);
+      opacity: 1;
+    }
+  }
+}
+.page-content {
+  h3 { 
+    margin: 8vmin 0 1vmin;   
+  }
+}
+
+.mid {
+  font-size: 75%;
+  text-transform: lowercase;
+  a:hover, a:focus {
+    color: var(--link-color);
+    opacity: 1;
+  }
+}
+.mid ul {
+  margin-top: 8vmin;
+  margin-bottom: 0rem;
+  margin-left: 0rem;
+}
+.mid ul li {
+  display: inline;
+}
+.mid ul li a {
+  font-weight: 400;
+  opacity: .3;
+}
+.mid ul li:before {
+  content: " ";
+}
+.mid ul li:after {
+  padding: 0 1vmax;
+  content: " / ";
+  opacity: .3;
+}
+.mid ul li:last-child:after {
+  content: none;
+}

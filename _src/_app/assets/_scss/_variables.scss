@@ -1,0 +1,30 @@
+//
+// Sass variables customization
+// -----------------------------------------------------------------------------
+// All Sass vaiables in `_variables.scss` can be overwritten below.
+// Due to the limitation of Sass, I don't have variable hoisting feature like
+// native CSS or Less at hand, so it's dirty to have two user defined
+// stylesheets, hope for native color manipulation in the future.
+//
+// - This file should contain only Sass variables defined in theme Curtana.
+// - CSS varaibles customization should be defined in `_user.scss`.
+
+:root {
+    // --text-color-h: 220;
+    // --text-color-s: 46%;
+    // --text-color-l: 35%;
+
+    --nav-padding: 1vmax;
+
+    --text-color-h: 0;
+    --text-color-s: 0%;
+    --text-color-l: 55%;
+
+    --link-color-h: 220;
+    --link-color-s: 46%;
+    --link-color-l: 35%;
+
+    --bg-color-h: 210;
+    --bg-color-s: 50%;
+    --bg-color-l: 98%;
+}

@@ -3,12 +3,12 @@
   "short_name": "Sahil Dave",
   "start_url": "/",
   "display": "standalone",
-  "theme_color": "#62E6AC",
-  "background_color": "#ffffff",
+  "theme_color": "#314d83",
+  "background_color": "#f6f9fc",
   "icons": [
     {
       "src": "/favicon.png",
-      "sizes": "192x192",
+      "sizes": "512x512",
       "type": "image/png"
     }
   ]

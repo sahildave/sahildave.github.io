@@ -1,0 +1,11 @@
+- title: __home__
+  url:   /
+
+- title: Work
+  url:   /#work
+
+- title: Blog
+  url:   /#blog
+
+- title: Resume
+  url:  /assets/cv.pdf

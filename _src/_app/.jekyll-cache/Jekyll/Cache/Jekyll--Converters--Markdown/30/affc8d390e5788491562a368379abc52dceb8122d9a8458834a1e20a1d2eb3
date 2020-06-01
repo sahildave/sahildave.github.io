@@ -1,0 +1,61 @@
+I"�<p>Last week I was developing an internal tool to create a design workflow for my workplace. The process involved creating a style guide for a new project by setting up the branding colours, typefaces, shadows and scrim. All went well until it was required to convert the text layers into symbols so as to generalise them as well.</p>
+
+<h2 id="problem">Problem</h2>
+
+<p>If you use a text layer in a symbol, you can only override only the text; not any other property including font colour or weight.
+This makes the symbol not so customisable. For example, you’d have to create multiple types of alert messages instead of just one where you can change the icon and colour.</p>
+
+<h2 id="solution">Solution</h2>
+
+<p>Until Sketch releases an update where you override all the properties in a text layer it would be good to convert all your text styles into text symbols and use them in your other symbols.
+In this article, I would share some snippets which acted as utils in my project. I kept these methods in a utils.js file and imported it by adding an import statement on top my main script.</p>
+
+<p><code class="language-plaintext highlighter-rouge">@import ‘utils.js’</code></p>
+
+<h3 id="finding-page-layer-or-symbol">Finding page, layer or symbol</h3>
+
+<script src="https://gist.github.com/sahildave/9ecf7ba5e96a35f6575f9c7a073e659c.js"></script>
+
+<p>First method is generic, where a list and a key is taken as parameters and name of every element is compared with it. If there is a match, the same item is returned. The other functions are the following:</p>
+
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">findLayerByName</code> takes the artboard as the parameter and iterates over the <code class="language-plaintext highlighter-rouge">artboard.layers()</code> list.</li>
+  <li><code class="language-plaintext highlighter-rouge">findPageByName</code> the pages parameter can be fetched from the document by using <code class="language-plaintext highlighter-rouge">doc.pages()</code>.</li>
+  <li><code class="language-plaintext highlighter-rouge">findSymbolByName</code> list of symbols can be obtained by, again, using the document. The <code class="language-plaintext highlighter-rouge">getSymbols(doc)</code> function looks like this.</li>
+</ol>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/**
+ * Get all the symbols for a document.
+ * @param {MSDocument} doc
+ * @return {NSArray}
+ */</span>
+<span class="kd">function</span> <span class="nx">getSymbols</span><span class="p">(</span><span class="nx">doc</span><span class="p">)</span> <span class="p">{</span>
+ <span class="k">return</span> <span class="nx">doc</span><span class="p">.</span><span class="nx">documentData</span><span class="p">().</span><span class="nx">allSymbols</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="creating-artboard-page-textlayer--symbol">Creating Artboard, Page, TextLayer &amp; Symbol</h3>
+
+<script src="https://gist.github.com/sahildave/9192956b791d57e5af9f64821d5b04c6.js"></script>
+
+<ol>
+  <li>The <code class="language-plaintext highlighter-rouge">createArtboard</code> function is self explanatory. It creates a new <code class="language-plaintext highlighter-rouge">MSArtboardGroup</code>, sets its name, geometry and adds it to the current page. This can be made even more generic by taking the page as a parameter.</li>
+  <li>There are two types of <code class="language-plaintext highlighter-rouge">createPage</code> functions. First creates a new page and adds it to the document data. Important step is to call <code class="language-plaintext highlighter-rouge">doc.loadLayerListPanel()</code> after you add the page, otherwise the page won’t appear on the left unless you collapse and expand the page list.
+The second function creates a blank page and renames it, as simple as that.</li>
+  <li>Creating text layer also follows the same trend. One thing to remember is to add it to a page by <code class="language-plaintext highlighter-rouge">page.addLayers([layer]);</code>.</li>
+  <li>Creating symbol from layer is a bit verbose. You take in a page, layer and the symbol name; add the layer to the page, convert the same layer to a new symbol, move this new symbol to the symbols page and remove the original symbol instance (which was added to the page).
+If you pass false in the third parameter of the call: <code class="language-plaintext highlighter-rouge">MSSymbolCreator. createSymbolFromLayers_withName_onSymbolsPage(layers, symbolName, true);</code> it would be added to the current page.</li>
+</ol>
+
+<h3 id="show-symbols-page-get-all-symbols-get-last-symbol">Show symbols page, get all symbols, get last symbol</h3>
+
+<script src="https://gist.github.com/sahildave/0533d4cae6e5280d3c1e69c4ae9830d2.js"></script>
+
+<p>Frankly, only the third function <code class="language-plaintext highlighter-rouge">getBottomSymbol</code> is the interesting function in this gist. It compares the position of the symbols and use the compare function to return the appropriate integer. Comments are added to help you out.</p>
+
+<p>I am now planning to release my workflow as a plugin. It essentially would help you out to set a theme for your project. It has inbuilt palette and typeface generator.</p>
+
+<hr />
+
+<p>This post originally appeared <a href="https://medium.com/sketch-app-sources/sketch-gists-useful-snippets-for-plugin-development-1-3-214a77097142">here</a> on Medium</p>
+:ET

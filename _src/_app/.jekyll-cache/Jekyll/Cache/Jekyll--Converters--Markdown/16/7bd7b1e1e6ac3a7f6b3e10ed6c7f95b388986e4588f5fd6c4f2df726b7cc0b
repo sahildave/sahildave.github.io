@@ -1,0 +1,91 @@
+I" <p>In the last post I had discussed how we are using product flavors to release different versions of the code base with minor changes. It had helped us serve different clients with different requirements.
+In this post I would share how we release multiple split libraries and have interdependencies similar to how Google releases play-services or appcompat libraries. It seems easy till the publishing day, until it is not! The problem with inter-dependency is maven does not add the version number in the pom file for local module dependencies.</p>
+
+<p><img src="/assets/images/multi_library.png" alt="Dependency Tree: Release Libraries are public libraries which are released using Maven." /></p>
+
+<h2 id="problem">Problem</h2>
+
+<p>The problem arises when you try to release the super-library and its pom file includes an <code class="language-plaintext highlighter-rouge">unspecified</code> version number for the core-library in the dependency node.</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="nt">&lt;project</span> <span class="na">xsi:schemaLocation=</span><span class="s">"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"</span> <span class="na">xmlns=</span><span class="s">"http://maven.apache.org/POM/4.0.0"</span>
+    <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;modelVersion&gt;</span>4.0.0<span class="nt">&lt;/modelVersion&gt;</span>
+  <span class="nt">&lt;groupId&gt;</span>lib-groupId<span class="nt">&lt;/groupId&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>lib-artifactId<span class="nt">&lt;/artifactId&gt;</span>
+  <span class="nt">&lt;version&gt;</span>0.0.1<span class="nt">&lt;/version&gt;</span>
+  <span class="nt">&lt;packaging&gt;</span>aar<span class="nt">&lt;/packaging&gt;</span>
+  <span class="nt">&lt;dependencies&gt;</span>
+    <span class="nt">&lt;dependency&gt;</span>
+      <span class="nt">&lt;groupId&gt;</span>com.android.support<span class="nt">&lt;/groupId&gt;</span>
+      <span class="nt">&lt;artifactId&gt;</span>appcompat-v7<span class="nt">&lt;/artifactId&gt;</span>
+      <span class="nt">&lt;version&gt;</span>25.1.0<span class="nt">&lt;/version&gt;</span>
+      <span class="nt">&lt;scope&gt;</span>compile<span class="nt">&lt;/scope&gt;</span>
+    <span class="nt">&lt;/dependency&gt;</span>
+    <span class="c">&lt;!-- Highlighted --&gt;</span>
+    <span class="nt">&lt;dependency&gt;</span>
+      <span class="nt">&lt;groupId&gt;</span>MultiLibrary<span class="nt">&lt;/groupId&gt;</span>
+      <span class="nt">&lt;artifactId&gt;</span>core-library<span class="nt">&lt;/artifactId&gt;</span>
+      <span class="nt">&lt;version&gt;</span>unspecified<span class="nt">&lt;/version&gt;</span>
+      <span class="nt">&lt;scope&gt;</span>compile<span class="nt">&lt;/scope&gt;</span>
+    <span class="nt">&lt;/dependency&gt;</span>
+    <span class="c">&lt;!-- Highlighted --&gt;</span>
+  <span class="nt">&lt;/dependencies&gt;</span>
+<span class="nt">&lt;/project&gt;</span>
+</code></pre></div></div>
+
+<h3 id="highlighted-above">Highlighted above:</h3>
+<ul>
+  <li><strong>groupId</strong> is the rootProject of the library. Here the repo name MultiLibrary.</li>
+  <li><strong>version</strong> is <code class="language-plaintext highlighter-rouge">unspecified</code></li>
+</ul>
+
+<p>When the client adds it in the their dependencies list, it wont compile throwing an error:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Failed to resolve: MultiLibrary.core-library:unspecified
+</code></pre></div></div>
+
+<h2 id="solution">Solution</h2>
+
+<p>We can inject a function just after pom evaluation is done. We would go through each dependency added in the pom file and edit the particular dependency node if its version is <code class="language-plaintext highlighter-rouge">unspecified</code>. You should check for both, <code class="language-plaintext highlighter-rouge">groupId</code> and <code class="language-plaintext highlighter-rouge">version</code>.</p>
+
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">uploadArchives</span> <span class="o">{</span>
+    <span class="n">repositories</span> <span class="o">{</span>
+        <span class="n">mavenDeployer</span> <span class="o">{</span>
+            <span class="n">repository</span><span class="o">(</span><span class="nl">url:</span> <span class="s2">"file://${buildDir}/outputs/maven"</span><span class="o">)</span>
+            <span class="n">pom</span><span class="o">.</span><span class="na">groupId</span> <span class="o">=</span> <span class="n">GROUP</span>
+            <span class="n">pom</span><span class="o">.</span><span class="na">artifactId</span> <span class="o">=</span> <span class="n">ARTIFACT_ID</span>
+            <span class="n">pom</span><span class="o">.</span><span class="na">version</span> <span class="o">=</span> <span class="n">VERSION</span>
+            <span class="n">pom</span><span class="o">.</span><span class="na">whenConfigured</span> <span class="o">{</span> <span class="n">pom</span> <span class="o">-&gt;</span>
+                <span class="n">println</span><span class="o">(</span><span class="s2">"Current Dependencies ${pom.dependencies}"</span><span class="o">)</span>
+                <span class="n">pom</span><span class="o">.</span><span class="na">dependencies</span><span class="o">.</span><span class="na">each</span> <span class="o">{</span> <span class="n">dep</span> <span class="o">-&gt;</span>
+                    <span class="n">println</span><span class="o">(</span><span class="s2">"Processing ${dep}"</span><span class="o">)</span>
+                    <span class="k">if</span> <span class="o">(</span><span class="n">dep</span><span class="o">.</span><span class="na">getVersion</span><span class="o">()</span> <span class="o">==</span> <span class="s2">"unspecified"</span> <span class="o">&amp;&amp;</span> <span class="n">dep</span><span class="o">.</span><span class="na">getGroupId</span><span class="o">()</span> <span class="o">==</span> <span class="n">rootProjectDir</span><span class="o">)</span> <span class="o">{</span>
+                        <span class="n">println</span><span class="o">(</span><span class="s2">"Updating Dependencies"</span><span class="o">)</span>
+                        <span class="n">dep</span><span class="o">.</span><span class="na">setGroupId</span><span class="o">(</span><span class="n">GROUP</span><span class="o">)</span>
+                        <span class="n">dep</span><span class="o">.</span><span class="na">setVersion</span><span class="o">(</span><span class="n">VERSION</span><span class="o">)</span>
+                        <span class="n">println</span><span class="o">(</span><span class="s2">"Updated ${dep}"</span><span class="o">)</span>
+                    <span class="o">}</span>
+                <span class="o">}</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Now the <code class="language-plaintext highlighter-rouge">core-library</code> dependency in the pom file looks like:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;dependency&gt;</span>
+  <span class="nt">&lt;groupId&gt;</span>lib-groupId<span class="nt">&lt;/groupId&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>core-library<span class="nt">&lt;/artifactId&gt;</span>
+  <span class="nt">&lt;version&gt;</span>0.0.1<span class="nt">&lt;/version&gt;</span>
+  <span class="nt">&lt;scope&gt;</span>compile<span class="nt">&lt;/scope&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+</code></pre></div></div>
+
+<p>Now the dependency is release ready and the client can integrate the super library. Also the sub libraries can be released as separate modules.</p>
+
+<hr />
+
+<p>This post originally appear <a href="https://android.jlelse.eu/releasing-multi-module-android-library-in-gradle-7286cd667b4b">here</a> on Medium</p>
+:ET

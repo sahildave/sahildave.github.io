@@ -1,0 +1,63 @@
+---
+layout: default
+title: Sahil Dave
+permalink: /
+thumb_force_logo: true
+---
+
+{% include amsf/core %}
+
+<!-- Article wrapper, limit width -->
+<article>
+  <!-- Post title -->
+  <header>
+    <h1 >
+      Hallo 👋
+    </h1>
+    <br><br>I’m a Berlin&#8208;based self&#8208;taught developer turned designer, skilled in interaction and experience design.
+      <br><br>By working on early&#8208;stage products & processes, I satisfy my insatiable appetite for learning new things.
+      I design around various creative touch-points and always keep the end&#8208;user in my mind.
+      The intersection of design & development is my favourite place to be.
+    <div class="mid">
+      <ul>
+        {% if site.dribbble_url %}
+				<li><a href="{{ site.dribbble_url }}" title="dribbble" target="_blank">dribbble</a></li>
+				{% endif %}
+
+        {% if site.behance_url %}
+				<li><a href="{{ site.behance_url }}" title="behance" target="_blank">behance</a></li>
+				{% endif %}
+
+        {% if site.linkedin_url %}
+				<li><a href="{{ site.linkedin_url }}" title="linkedin" target="_blank">linkedin</a></li>
+				{% endif %}
+
+        {% if site.twitter_url %}
+				<li><a href="{{ site.twitter_url }}" title="twitter" target="_blank">twitter</a></li>
+				{% endif %}
+        
+        {% if site.mail_url %}
+				<li><a href="{{ site.mail_url }}" title="mail" target="_blank">contact</a></li>
+				{% endif %}
+        
+      </ul>
+    </div>
+  </header>
+
+  <div class="page-content">
+    <h3 id="work">Work</h3>
+    {% for post in site.tags.Work %}
+      {% include themes/{{ site.amsf_theme }}/includes/page-item.html %}
+    {% endfor %}
+
+    <h3 id="blog">Blog</h3>
+    {% for post in site.tags.Blog %}
+      {% include themes/{{ site.amsf_theme }}/includes/page-item.html %}
+    {% endfor %}
+
+    <h3 id="archive">Archive</h3>
+    {% for post in site.tags.Archive %}
+      {% include themes/{{ site.amsf_theme }}/includes/page-item.html %}
+    {% endfor %}
+  </div>
+</article>

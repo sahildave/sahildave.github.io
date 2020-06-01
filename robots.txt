@@ -1,4 +1,3 @@
+Sitemap: http://0.0.0.0:4321/sitemap.xml
+
 User-agent: *
-
-
-Sitemap: https://www.sahildave.com/sitemap.xml

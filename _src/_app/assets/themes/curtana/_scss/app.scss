@@ -1,0 +1,21 @@
+//
+// Curtana for Almace Scaffolding | © Tunghsiao Liu | MIT
+//
+
+// Core components
+@import "mixins";
+@import "variables";
+
+// Sass variables customization
+@import "../../../_scss/variables";
+
+@import "reset";
+@import "common";
+@import "plugins";
+@import "print";
+
+// Extra components
+@import "components/randomized";
+
+// Finally user custom styles go here
+@import "../../../_scss/user";
