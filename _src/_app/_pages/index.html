@@ -14,10 +14,12 @@ thumb_force_logo: true
     <h1 >
       Hallo 👋
     </h1>
-    <br><br>I’m a Berlin&#8208;based self&#8208;taught developer turned designer, skilled in interaction and experience design.
+    <p>
+      <br><br>I’m a Berlin&#8208;based self&#8208;taught developer turned designer, skilled in interaction and experience design.
       <br><br>By working on early&#8208;stage products & processes, I satisfy my insatiable appetite for learning new things.
       I design around various creative touch-points and always keep the end&#8208;user in my mind.
       The intersection of design & development is my favourite place to be.
+  </p>
     <div class="mid">
       <ul>
         {% if site.dribbble_url %}
@@ -45,17 +47,17 @@ thumb_force_logo: true
   </header>
 
   <div class="page-content">
-    <h3 id="work">Work</h3>
+    <h6 id="work">Work</h6>
     {% for post in site.tags.Work %}
       {% include themes/{{ site.amsf_theme }}/includes/page-item.html %}
     {% endfor %}
 
-    <h3 id="blog">Blog</h3>
+    <h6 id="blog">Blog</h6>
     {% for post in site.tags.Blog %}
       {% include themes/{{ site.amsf_theme }}/includes/page-item.html %}
     {% endfor %}
 
-    <h3 id="archive">Archive</h3>
+    <h6 id="archive">Archive</h6>
     {% for post in site.tags.Archive %}
       {% include themes/{{ site.amsf_theme }}/includes/page-item.html %}
     {% endfor %}

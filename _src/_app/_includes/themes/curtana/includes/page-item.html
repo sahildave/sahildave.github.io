@@ -23,7 +23,7 @@
 {% endcapture %}
 
 <section class="list">
-  <h2>
+  <h3>
     <!-- Item title -->
     <a href="{{ post.url | relative_url }}" {% if site.data.curtana.colorful_list %}{{ post_link_color }}{% endif %}>{{ amsf_page_title }}</a>
 
@@ -31,5 +31,5 @@
     {% if post.link %}
       <a href="{{ post.link }}" class=external><span class="dot" {% if site.data.curtana.colorful_list %}{{ post_link_bg }}{% endif %}> </span></a>
     {% endif %}
-  </h2>
+  </h3>
 </section>
