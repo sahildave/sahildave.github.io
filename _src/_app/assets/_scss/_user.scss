@@ -50,7 +50,8 @@ body {
 }
 
 .navigation {
-  font-size: 0.9rem;
+  font-size: 1.125rem;
+  margin-top: 1vmin;
 }
 
 
@@ -61,24 +62,24 @@ body {
 // Universal typography
 .content {
   h2 { 
-    font-size: 3.6rem; 
+    font-size: 3rem; 
     opacity: .87;
     font-weight: bold;
-    @media (max-width: $breakpoint-xs) {
-      font-size: 2.4rem;
-    }
-  }
-  h3 { 
-    font-size: 2.4rem; 
-    opacity: .87; 
     @media (max-width: $breakpoint-xs) {
       font-size: 2rem;
     }
   }
-  h4 { font-size: 2rem;  opacity: .66; }
+  h3 { 
+    font-size: 2rem; 
+    opacity: .87; 
+    @media (max-width: $breakpoint-xs) {
+      font-size: 1.6rem;
+    }
+  }
+  h4 { font-size: 1.6rem;  opacity: .66; }
   h5 { font-size: 1.4rem;  opacity: .5; }
   h6 { 
-    font-size: 1.2rem;  
+    font-size: 1.25rem;  
     opacity: .66;     
     margin: 2vmin 0 8vmin;   
   }
@@ -87,7 +88,7 @@ body {
   }
 
   blockquote {
-    font-size: 0.8rem;
+    font-size: 1.2rem;
   }
 
   header {

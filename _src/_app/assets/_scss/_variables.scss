@@ -10,7 +10,7 @@
 // - CSS varaibles customization should be defined in `_user.scss`.
 
 @mixin heading {
-    font-size: 4rem;
+    font-size: 3.6rem;
     font-weight: bold;
     letter-spacing: var(--heading-letter-spacing);
     font-family: var(--fontstack-serif);
@@ -27,7 +27,7 @@
     // --text-color-h: 220;
     // --text-color-s: 46%;
     // --text-color-l: 35%;
-    --font-size: 1rem;
+    --font-size: 1.25rem;
     // --font-size-base: 1rem;
     // --font-size-factor: 1vw;
     // --font-size: calc(var(--font-size-base) + var(--font-size-factor));
